@@ -1,6 +1,6 @@
 # Hey, thanks for using my theme. If you like this theme,checkout my repo (https://gitlab.com/avron/gruvhugo"
 # and drop a star while you're at it. ;)
-baseurl = "https://examplesite.com/"
+baseurl = "https://behouba.github.io/"
 title = "Behouba Manasse"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
