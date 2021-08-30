@@ -35,8 +35,8 @@ metaDataFormat= "yaml"
   img = "img/author.jpg"
   # Thanks to Christina @ wocintechchat.com for this photo.
   icon = "img/logo.png"
-  quote = "“Most inventors and engineers I’ve met are like me. They’re shy and they live in their heads. The very best of them are artists. And artists work best alone…” ~ Steve Wozniak"
-  description= "Hello, my name is Kouame Behouba Manasse. I am Software Engineer and Master student in Software Engineering at Innopolis University with 2+ years of experience as back-end software developer. I am very passionate about programming, open-source software, cybersecurity, video games, and blockchain."
+  quote = ""
+  description= "Hello, I am Manasse. This is the place where I share stuff about my learnings. I am Software Engineer and Master student in Software Engineering at Innopolis University with 2+ years of experience as back-end software developer. I am very passionate about programming, open-source software, cybersecurity, video games, and blockchain."
   licenseUrl = ""
 
  # Social icons
