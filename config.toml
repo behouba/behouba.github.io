@@ -1,9 +1,8 @@
-# Hey, thanks for using my theme. If you like this theme,checkout my repo (https://gitlab.com/avron/gruvhugo"
-# and drop a star while you're at it. ;)
-baseurl = "https://examplesite.com/"
+
+baseurl = "https://behouba.github.io/"
 title = "Behouba Manasse"
 languageCode = "en-us"
-paginate = "10" # Number of posts per page
+paginate = "10" # Number of posts per page.
 #disqusShortname = "" # Enable comments by entering your Disqus shortname
 #googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 #-------------------------------------------------------------------------------
@@ -11,7 +10,7 @@ paginate = "10" # Number of posts per page
 #-------------------------------------------------------------------------------
 
 # Default Theme
-theme= "gruvhugo"
+theme= "cactus"
 
 # Default Post Extension
 defaultExtension= "html"
@@ -25,42 +24,38 @@ metaDataFormat= "yaml"
   category = "categories"
   series   = "series"
 
-[params.main]
+[params]
   enabled = true
   enableKatex = true
   metaKeywords = "fast, hugo, theme, minimal, gruvbox"
   headerTitle = "Behouba Manasse Kouame"
   copyright = "© 2021 Behouba Manasse.  <a href=\"https://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
-  name = "jane_doe"
+  name = "Manasse"
   img = "img/author.jpg"
+  tagsOverview = true
   # Thanks to Christina @ wocintechchat.com for this photo.
   icon = "img/logo.png"
-  quote = "“Most inventors and engineers I’ve met are like me. They’re shy and they live in their heads. The very best of them are artists. And artists work best alone…” ~ Steve Wozniak"
-  description= "Hello, my name is Kouame Behouba Manasse. I am Software Engineer and Master student in Software Engineering at Innopolis University with 2+ years of experience as back-end software developer. I am very passionate about programming, open-source software, cybersecurity, video games, and blockchain."
+  description= "Hello, I am Manasse. This is the place where I share stuff about my learnings. I am a Software Engineer and Master's student in Software Engineering at Innopolis University with 4+ years of experience as a backend software developer. I am very passionate about programming, open-source software, Operating systems,  cybersecurity, video games, and blockchain."
   licenseUrl = ""
+  showProjectsList = true # show projects list by default (if projects data file exists).
+
+
+
+
 
  # Social icons
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/"
+[[params.social]]
+  name = "github"
+  link = "https://github.com/behouba"
 
-  [[params.social]]
-    name = "email"
-    url  = "mailto:behouba@gmail.com"
+[[params.social]]
+  name = "email"
+  link = "behouba@gmail.com" # no need for "mailto:" at the start
 
-  [[params.social]]
-    name = "gpg"
-    url  = "https://keys.openpgp.org/"
+[[params.social]]
+  name = "linkedin"
+  link = "https://www.linkedin.com/in/behouba/"
 
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/behouba_"
-
-
-
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/in/behouba"
 
 [menu]
   [[menu.main]]

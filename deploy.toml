@@ -1,7 +1,6 @@
-# Hey, thanks for using my theme. If you like this theme,checkout my repo (https://gitlab.com/avron/gruvhugo"
-# and drop a star while you're at it. ;)
-baseurl = "https://avron.gitlab.io/gruvhugo/"
-title = "Jane Doe"
+
+baseurl = "https://behouba.github.io/"
+title = "Behouba Manasse"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
 #disqusShortname = "" # Enable comments by entering your Disqus shortname
@@ -11,7 +10,7 @@ paginate = "10" # Number of posts per page
 #-------------------------------------------------------------------------------
 
 # Default Theme
-theme= "gruvhugo"
+theme= "cactus"
 
 # Default Post Extension
 defaultExtension= "html"
@@ -25,50 +24,44 @@ metaDataFormat= "yaml"
   category = "categories"
   series   = "series"
 
-[params.main]
+[params]
   enabled = true
   enableKatex = true
   metaKeywords = "fast, hugo, theme, minimal, gruvbox"
-  name = "jane_doe"
-  headerTitle = "Jane Doe"
-  copyright = "© 2021 Jane Doe.  <a href=\"https://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+  headerTitle = "Behouba Manasse Kouame"
+  copyright = "© 2021 Behouba Manasse.  <a href=\"https://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+  name = "Manasse"
   img = "img/author.jpg"
+  tagsOverview = true
   # Thanks to Christina @ wocintechchat.com for this photo.
   icon = "img/logo.png"
-  quote = "A nice quote that you like that describes the beautiful person you are."
-  description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Quis risus sed vulputate odio ut. Sed turpis tincidunt id aliquet risus feugiat in ante metus. Bibendum at varius vel pharetra vel turpis. Semper viverra nam libero justo laoreet sit amet cursus. Mauris a diam maecenas sed enim ut sem."
-  licenseUrl = "https://gitlab.com/avron/gruvhugo/-/raw/master/LICENSE.md"
+  description= "Hello, I am Manasse. This is the place where I share stuff about my learnings. I am Software Engineer and Master student in Software Engineering at Innopolis University with 2+ years of experience as back-end software developer. I am very passionate about programming, open-source software, cybersecurity, video games, and blockchain."
+  licenseUrl = ""
+  showProjectsList = true # show projects list by default (if projects data file exists).
+
+
+
+
 
  # Social icons
-  [[params.social]]
-    name = "gitlab"
-    url  = "https://gitlab.com/avron/gruvhugo"
+[[params.social]]
+  name = "github"
+  link = "https://github.com/behouba"
 
-  [[params.social]]
-    name = "email"
-    url  = "mailto:mail@mail.com"
+[[params.social]]
+  name = "email"
+  link = "behouba@gmail.com" # no need for "mailto:" at the start
 
-  [[params.social]]
-    name = "gpg"
-    url  = "https://keys.openpgp.org/"
+[[params.social]]
+  name = "linkedin"
+  link = "https://www.linkedin.com/in/behouba/"
 
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/"
-
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/"
-
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/"
 
 [menu]
   [[menu.main]]
     identifier = "about"
     name       = "About"
-    url        = "about"
+    url        = "/"
 
   [[menu.main]]
     identifier = "posts"
@@ -76,9 +69,9 @@ metaDataFormat= "yaml"
     url        = "post/"
 
   [[menu.main]]
-    identifier = "wiki"
-    name       = "Wiki"
-    url        = "none"
+    identifier = "cv"
+    name       = "Resumé"
+    url        = "cv"
 
 [markup]
   defaultMarkdownHandler = "goldmark"
