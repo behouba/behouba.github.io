@@ -35,7 +35,7 @@ metaDataFormat= "yaml"
   tagsOverview = true
   # Thanks to Christina @ wocintechchat.com for this photo.
   icon = "img/logo.png"
-  description= "Hello, I am Manasse. This is the place where I share stuff about my learnings. I am a Software Engineer and Master's student in Software Engineering at Innopolis University with 2+ years of experience as a backend software developer. I am very passionate about programming, open-source software, Operating systems,  cybersecurity, video games, and blockchain."
+  description= "Hello, I am Manasse. This is the place where I share stuff about my learnings. I am a Software Engineer and Master's student in Software Engineering at Innopolis University with 4+ years of experience as a backend software developer. I am very passionate about programming, open-source software, Operating systems,  cybersecurity, video games, and blockchain."
   licenseUrl = ""
   showProjectsList = true # show projects list by default (if projects data file exists).
 
