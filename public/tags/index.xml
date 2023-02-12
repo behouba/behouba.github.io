@@ -1,85 +1,90 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Behouba Manasse</title>
-    <link>https://examplesite.com/tags/</link>
+    <link>https://behouba.github.io/tags/</link>
     <description>Recent content in Tags on Behouba Manasse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://examplesite.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://behouba.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>privacy</title>
-      <link>https://examplesite.com/tags/privacy/</link>
+      <link>https://behouba.github.io/tags/privacy/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/privacy/</guid>
+      <guid>https://behouba.github.io/tags/privacy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shortcodes</title>
-      <link>https://examplesite.com/tags/shortcodes/</link>
+      <link>https://behouba.github.io/tags/shortcodes/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/shortcodes/</guid>
+      <guid>https://behouba.github.io/tags/shortcodes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://examplesite.com/tags/markdown/</link>
+      <link>https://behouba.github.io/tags/markdown/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/markdown/</guid>
+      <guid>https://behouba.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>text</title>
-      <link>https://examplesite.com/tags/text/</link>
+      <link>https://behouba.github.io/tags/text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/text/</guid>
+      <guid>https://behouba.github.io/tags/text/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>emoji</title>
-      <link>https://examplesite.com/tags/emoji/</link>
+      <title>Golang</title>
+      <link>https://behouba.github.io/tags/golang/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/emoji/</guid>
+      <guid>https://behouba.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://behouba.github.io/tags/linux/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://behouba.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>css</title>
-      <link>https://examplesite.com/tags/css/</link>
+      <link>https://behouba.github.io/tags/css/</link>
       <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/css/</guid>
+      <guid>https://behouba.github.io/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>https://examplesite.com/tags/html/</link>
+      <link>https://behouba.github.io/tags/html/</link>
       <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/html/</guid>
+      <guid>https://behouba.github.io/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>index</title>
-      <link>https://examplesite.com/tags/index/</link>
+      <link>https://behouba.github.io/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/index/</guid>
+      <guid>https://behouba.github.io/tags/index/</guid>
       <description></description>
     </item>
     
