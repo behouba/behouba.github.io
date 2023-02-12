@@ -1,0 +1,158 @@
+baseurl: 'https://behouba.github.io/'
+title: Behouba Manasse
+languageCode: en-us
+paginate: 5
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+defaultExtension: html
+metaDataFormat: yaml
+ignoreErrors:
+  - error-remote-getjson
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
+
+  
+params:
+  enabled: true
+  enableKatex: true
+  metaKeywords: 'fast, hugo, theme, minimal, gruvbox'
+  headerTitle: Behouba Manasse Kouame
+  copyright: >-
+    © 2021 Behouba Manasse.  <a
+    href="https://creativecommons.org/licenses/by/4.0/">Some rights
+    reserved</a>.
+  name: Manasse
+  img: img/author.jpg
+  tagsOverview: true
+  icon: img/logo.png
+
+  mainSection: posts
+
+  profileMode:
+      enabled: false
+      title: "Behouba Manassé"
+      imageUrl: "#"
+      imageTitle: my image
+      # imageWidth: 120
+      # imageHeight: 120
+      buttons:
+          - name: Archives
+            url: archives
+          - name: Tags
+            url: tags
+
+  homeInfoParams:
+      Title: "About me"
+      Content: >
+          - Hi,
+
+          - My name is **Kouamé Behouba Manassé**, I am a software engineer with a Master degree in Software Engineering from Innopolis University. 
+            This is my blog, where I will write about my learning journey on various software engineering topics. 
+            I am mostly interested in server-side programming, decentralized systems, networking, databases, and security, so this is obviously the wrong place to be if you are more into front-end, design, and UI/UX 🥲. 
+
+          - Also, I'm not a native English speaker, so I apologize in advance for any mistakes 🙏🏾.
+
+  socialIcons:
+      - name: github
+        url: "https://github.com/behouba"
+      - name: stackoverflow
+        url: "https://stackoverflow.com/users/8027157/manassé"
+      - name: twitter
+        url: "https://twitter.com/behouba_"
+      - name: telegram
+        url: "https://t.me/behouba"
+
+  editPost:
+      URL: "https://github.com/behouba/behouba.github.io/content"
+      Text: "Suggest Changes" # edit text
+      appendFilePath: true # to append file path to Edit link
+   
+  licenseUrl: ''
+  showProjectsList: true
+  social:
+    - name: github
+      link: 'https://github.com/behouba'
+    - name: email
+      link: behouba@gmail.com
+    - name: linkedin
+      link: 'https://www.linkedin.com/in/behouba/'
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+    - identifier: posts
+      name: Posts
+      url: posts/
+    - identifier: cv
+      name: Resumé
+      url: cv
+markup:
+  defaultMarkdownHandler: goldmark
+  asciidocExt:
+    backend: html5
+    docType: article
+    extensions: []
+    failureLevel: fatal
+    noHeaderOrFooter: true
+    safeMode: unsafe
+    sectionNumbers: false
+    trace: false
+    verbose: true
+    workingFolderCurrent: false
+    attributes: {}
+  blackFriday:
+    angledQuotes: false
+    footnoteAnchorPrefix: ''
+    footnoteReturnLinkContents: ''
+    fractions: true
+    hrefTargetBlank: false
+    latexDashes: true
+    nofollowLinks: false
+    noreferrerLinks: false
+    plainIDAnchors: true
+    skipHTML: false
+    smartDashes: true
+    smartypants: true
+    smartypantsQuotesNBSP: false
+    taskLists: true
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: false
+      xhtml: false
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ''
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
