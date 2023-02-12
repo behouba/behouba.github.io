@@ -1,5 +1,6 @@
 ## Project
-This is the repository of my personal website and blog.
+
+This is the repository of my personal website/blog.
 
 # Setup
 
