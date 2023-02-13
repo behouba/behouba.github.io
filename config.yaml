@@ -34,8 +34,9 @@ params:
   img: img/author.jpg
   tagsOverview: true
   icon: img/logo.png
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
 
-  mainSection: posts
 
   profileMode:
       enabled: false
@@ -53,13 +54,11 @@ params:
   homeInfoParams:
       Title: "About me"
       Content: >
-          - Hi,
+          - Hello 👋,
 
-          - My name is **Kouamé Behouba Manassé**, I am a software engineer with a Master degree in Software Engineering from Innopolis University. 
+          - My name is **Kouamé Behouba Manassé**, I am a software engineer. 
             This is my blog, where I will write about my learning journey on various software engineering topics. 
-            I am mostly interested in server-side programming, decentralized systems, networking, databases, and security, so this is obviously the wrong place to be if you are more into front-end, design, and UI/UX 🥲. 
-
-          - Also, I'm not a native English speaker, so I apologize in advance for any mistakes 🙏🏾.
+            I am mostly interested in server-side programming, decentralized systems, networking, databases, and security. 
 
   socialIcons:
       - name: github
@@ -70,6 +69,9 @@ params:
         url: "https://twitter.com/behouba_"
       - name: telegram
         url: "https://t.me/behouba"
+      - name: email
+        url: "mailto:behouba@gmail.com"
+
 
   editPost:
       URL: "https://github.com/behouba/behouba.github.io/content"
@@ -83,8 +85,7 @@ params:
       link: 'https://github.com/behouba'
     - name: email
       link: behouba@gmail.com
-    - name: linkedin
-      link: 'https://www.linkedin.com/in/behouba/'
+
 menu:
   main:
     - identifier: home
@@ -105,7 +106,7 @@ markup:
     failureLevel: fatal
     noHeaderOrFooter: true
     safeMode: unsafe
-    sectionNumbers: false
+    sectionNumbers: 3
     trace: false
     verbose: true
     workingFolderCurrent: false
