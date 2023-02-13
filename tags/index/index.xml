@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>index on Behouba Manasse</title><link>https://behouba.github.io/tags/index/</link><description>Recent content in index on Behouba Manasse</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://behouba.github.io/tags/index/index.xml" rel="self" type="application/rss+xml"/><item><title>Posts</title><link>https://behouba.github.io/posts/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>https://behouba.github.io/posts/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>index on Behouba Manasse</title>
+    <link>https://behouba.github.io/tags/index/</link>
+    <description>Recent content in index on Behouba Manasse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://behouba.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Posts</title>
+      <link>https://behouba.github.io/posts/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://behouba.github.io/posts/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
