@@ -5,7 +5,7 @@ author = "Kouame Behouba Manasse"
 # Behouba Manasse Kouame
 Software Engineer
 
-[Github](https://github.com/behouba) | [johndoe@email.com](mailto:behouba@gmail.com)
+[Github](https://github.com/behouba) | [behouba@gmail.com](mailto:behouba@gmail.com)
 
 
 ## Work Experience
@@ -28,7 +28,7 @@ Software Engineer
 
 ## Skills
 - Programming languages: Golang, C/C++, Python, JavaScript, Dart
-- Database management: PostgreSQL, MongoDB
+- Database management: PostgreSQL, MySQL, MongoDB
 - Operating systems: Linux, Windows 10/11
 - Version control: Git
 - Cloud technologies: AWS, GCP
