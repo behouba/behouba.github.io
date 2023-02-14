@@ -16,15 +16,15 @@ Software Engineer
 - Led efforts to improve code quality and maintainability by implementing automated testing and continuous integration
 - Added new features to the cross-platform mobile app, improving its functionality and user experience
 
-## Open Source Contributions
-- Contributed to [Syzkaller](https://github.com/google/syzkaller) kernel fuzzer by fixing [bugs](https://github.com/google/syzkaller/commits?author=behouba) and updatating documentation.
-- Contributed to [Matrix.org](https://github.com/matrix-org) by helping fixing issues in [Dendrite](https://github.com/matrix-org/dendrite/commits?author=behouba) (a second-generation Matrix homeserver written in Go) and [gomatrixserverlib](https://github.com/matrix-org/gomatrixserverlib/commits?author=behouba).
-
-
 ## Education
 
 - Master's Degree in Software Engineering, Innopolis University (2021-2023)
 - Bachelor of Science in Computer Science, Dagestan State Technical University (2016 - 2020)
+
+
+## Open Source Contributions
+- Contributed to [Syzkaller](https://github.com/google/syzkaller) kernel fuzzer by fixing [bugs](https://github.com/google/syzkaller/commits?author=behouba) and updatating documentation.
+- Contributed to [Matrix.org](https://github.com/matrix-org) by helping fixing issues in [Dendrite](https://github.com/matrix-org/dendrite/commits?author=behouba) (a second-generation Matrix homeserver written in Go) and [gomatrixserverlib](https://github.com/matrix-org/gomatrixserverlib/commits?author=behouba).
 
 ## Skills
 - Programming languages: Golang, C/C++, Python, JavaScript, Dart
