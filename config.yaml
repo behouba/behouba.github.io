@@ -56,9 +56,10 @@ params:
       Content: >
           - Hello 👋,
 
-          - My name is **Kouamé Behouba Manassé**, I am a software engineer. 
-            This is my blog, where I will write about my learning journey on various software engineering topics. 
-            I am mostly interested in server-side programming, decentralized systems, networking, databases, and security. 
+          - My name is Kouamé Behouba Manassé, and I am a software engineer. 
+          I have a passion for exploring all aspects of software engineering, with a particular focus on server-side programming, 
+          decentralized systems, networking, databases, and security. On this blog, I will share my thoughts and insights on these topics, 
+          as well as my personal learning journey. 
 
   socialIcons:
       - name: github
