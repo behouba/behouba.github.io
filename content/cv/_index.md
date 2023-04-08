@@ -11,6 +11,8 @@ Software Engineer
 ## Work Experience
 
 ### Intern at ASERO Worldwide
+- Assistant for cybersécurity expert for a cybersecurity risks assessement project in Senegal
+- Responsible for translation of report from English to French
 
 ### Software Engineer at Akwaba Express (2018 - 2020)
 
