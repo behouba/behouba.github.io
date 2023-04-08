@@ -10,6 +10,8 @@ Software Engineer
 
 ## Work Experience
 
+### Intern at ASERO Worldwide
+
 ### Software Engineer at Akwaba Express (2018 - 2020)
 
 - Developed and maintained a RESTful API using Go and PostgreSQL
