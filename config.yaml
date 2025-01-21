@@ -2,7 +2,7 @@ baseurl: 'https://behouba.github.io/'
 title: Behouba Manasse
 languageCode: en-us
 paginate: 5
-theme: PaperMod
+theme: "ink-free"
 
 enableInlineShortcodes: true
 enableRobotsTXT: true

@@ -1,3 +1,0 @@
-+++
-author = "Kouame Behouba Manasse"
-+++
