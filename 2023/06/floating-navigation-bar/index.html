@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Floating Navigation bar - Behouba Manassé Kouamé</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	
+  <meta itemprop="name" content="Floating Navigation bar">
+  <meta itemprop="description" content="The Floating Navigation bar can get truncated to show h2 headings if the table of content gets to long">
+  <meta itemprop="datePublished" content="2023-06-19T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-06-19T00:00:00+00:00">
+  <meta itemprop="wordCount" content="644">
+  <meta itemprop="keywords" content="Markdown,Css,Html,Themes"><meta property="og:url" content="//localhost:1313/2023/06/floating-navigation-bar/">
+  <meta property="og:site_name" content="Behouba Manassé Kouamé">
+  <meta property="og:title" content="Floating Navigation bar">
+  <meta property="og:description" content="The Floating Navigation bar can get truncated to show h2 headings if the table of content gets to long">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-06-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-06-19T00:00:00+00:00">
+    <meta property="article:tag" content="Markdown">
+    <meta property="article:tag" content="Css">
+    <meta property="article:tag" content="Html">
+    <meta property="article:tag" content="Themes">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Floating Navigation bar">
+  <meta name="twitter:description" content="The Floating Navigation bar can get truncated to show h2 headings if the table of content gets to long">
+<link rel="stylesheet" type="text/css" media="screen" href="//localhost:1313/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="//localhost:1313/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="//localhost:1313/css/dark.css" />
+
+	<script src="//localhost:1313/js/feather.min.js"></script>
+	
+		<script src="//localhost:1313/js/main.js"></script>
+</head>
+
+
+<body>
+
+
+	
+	<div class="container-wide wrapper">
+		<div class="header">
+	
+	<h1 class="site-title"><a href="//localhost:1313/">Behouba Manassé Kouamé</a></h1>
+	<div class="site-description"><p>I am a Software Engineer and Master’s student at Polytechnique Montréal, with a strong interest in cloud computing, distributed systems, and software security</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/behouba" title="Github"><i data-feather="github"></i></a></li><li><a href="https://twitter.com/behouba_" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags &amp; Stats</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		
+<div class="article-nav" id="article-nav-id">
+    <div class="post">
+        <div class="post-header">
+    
+    <div class="meta">
+        <div class="date">
+            <span class="day">19</span>
+            <span class="rest">Jun 2023</span>
+        </div>
+    </div>
+    
+    <div class="matter">
+        <h1 class="title">Floating Navigation bar</h1>
+    </div>
+</div>
+
+
+        
+        
+        <aside class="toc" id="static-toc">
+            <header>
+                <h3>Contents</h3>
+            </header>
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#header">Header</a>
+      <ol>
+        <li><a href="#subitem">Subitem</a></li>
+        <li><a href="#subitem-1">Subitem</a></li>
+        <li><a href="#subitem-2">Subitem</a></li>
+        <li><a href="#subitem-3">Subitem</a></li>
+        <li><a href="#subitem-4">Subitem</a></li>
+        <li><a href="#subitem-5">Subitem</a></li>
+        <li><a href="#subitem-6">Subitem</a></li>
+        <li><a href="#subitem-7">Subitem</a></li>
+        <li><a href="#subitem-8">Subitem</a></li>
+        <li><a href="#subitem-9">Subitem</a></li>
+        <li><a href="#subitem-10">Subitem</a></li>
+        <li><a href="#subitem-11">Subitem</a></li>
+        <li><a href="#subitem-12">Subitem</a></li>
+        <li><a href="#subitem-13">Subitem</a></li>
+        <li><a href="#subitem-14">Subitem</a></li>
+        <li><a href="#subitem-15">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-2">Header 2</a>
+      <ol>
+        <li><a href="#subitem-16">Subitem</a></li>
+        <li><a href="#subitem-17">Subitem</a></li>
+        <li><a href="#subitem-18">Subitem</a></li>
+        <li><a href="#subitem-19">Subitem</a></li>
+        <li><a href="#subitem-20">Subitem</a></li>
+        <li><a href="#subitem-21">Subitem</a></li>
+        <li><a href="#subitem-22">Subitem</a></li>
+        <li><a href="#subitem-23">Subitem</a></li>
+        <li><a href="#subitem-24">Subitem</a></li>
+        <li><a href="#subitem-25">Subitem</a></li>
+        <li><a href="#subitem-26">Subitem</a></li>
+        <li><a href="#subitem-27">Subitem</a></li>
+        <li><a href="#subitem-28">Subitem</a></li>
+        <li><a href="#subitem-29">Subitem</a></li>
+        <li><a href="#subitem-30">Subitem</a></li>
+        <li><a href="#subitem-31">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-1">Header 1</a>
+      <ol>
+        <li><a href="#subitem-32">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-2-1">Header 2</a>
+      <ol>
+        <li><a href="#subitem-33">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-3">Header 3</a>
+      <ol>
+        <li><a href="#subitem-34">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-4">Header 4</a>
+      <ol>
+        <li><a href="#subitem-35">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-5">Header 5</a>
+      <ol>
+        <li><a href="#subitem-36">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-6">Header 6</a>
+      <ol>
+        <li><a href="#subitem-37">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-7">Header 7</a>
+      <ol>
+        <li><a href="#subitem-38">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-8">Header 8</a>
+      <ol>
+        <li><a href="#subitem-39">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-9">Header 9</a>
+      <ol>
+        <li><a href="#subitem-40">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-10">Header 10</a>
+      <ol>
+        <li><a href="#subitem-41">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-11">Header 11</a>
+      <ol>
+        <li><a href="#subitem-42">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-12">Header 12</a>
+      <ol>
+        <li><a href="#subitem-43">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-13">Header 13</a>
+      <ol>
+        <li><a href="#subitem-44">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-14">Header 14</a>
+      <ol>
+        <li><a href="#subitem-45">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-15">Header 15</a>
+      <ol>
+        <li><a href="#subitem-46">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-16">Header 16</a>
+      <ol>
+        <li><a href="#subitem-47">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-17">Header 17</a>
+      <ol>
+        <li><a href="#subitem-48">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-18">Header 18</a>
+      <ol>
+        <li><a href="#subitem-49">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-19">Header 19</a>
+      <ol>
+        <li><a href="#subitem-50">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-20">Header 20</a>
+      <ol>
+        <li><a href="#subitem-51">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-21">Header 21</a>
+      <ol>
+        <li><a href="#subitem-52">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-22">Header 22</a>
+      <ol>
+        <li><a href="#subitem-53">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-23">Header 23</a>
+      <ol>
+        <li><a href="#subitem-54">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-24">Header 24</a>
+      <ol>
+        <li><a href="#subitem-55">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-25">Header 25</a>
+      <ol>
+        <li><a href="#subitem-56">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-26">Header 26</a>
+      <ol>
+        <li><a href="#subitem-57">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-27">Header 27</a>
+      <ol>
+        <li><a href="#subitem-58">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-28">Header 28</a>
+      <ol>
+        <li><a href="#subitem-59">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-29">Header 29</a>
+      <ol>
+        <li><a href="#subitem-60">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-30">Header 30</a>
+      <ol>
+        <li><a href="#subitem-61">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-31">Header 31</a>
+      <ol>
+        <li><a href="#subitem-62">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-32">Header 32</a>
+      <ol>
+        <li><a href="#subitem-63">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-33">Header 33</a>
+      <ol>
+        <li><a href="#subitem-64">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-34">Header 34</a>
+      <ol>
+        <li><a href="#subitem-65">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-35">Header 35</a>
+      <ol>
+        <li><a href="#subitem-66">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-36">Header 36</a>
+      <ol>
+        <li><a href="#subitem-67">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-37">Header 37</a>
+      <ol>
+        <li><a href="#subitem-68">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-38">Header 38</a>
+      <ol>
+        <li><a href="#subitem-69">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-39">Header 39</a>
+      <ol>
+        <li><a href="#subitem-70">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-40">Header 40</a>
+      <ol>
+        <li><a href="#subitem-71">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-41">Header 41</a>
+      <ol>
+        <li><a href="#subitem-72">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-42">Header 42</a>
+      <ol>
+        <li><a href="#subitem-73">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-43">Header 43</a>
+      <ol>
+        <li><a href="#subitem-74">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-44">Header 44</a>
+      <ol>
+        <li><a href="#subitem-75">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-45">Header 45</a>
+      <ol>
+        <li><a href="#subitem-76">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-46">Header 46</a>
+      <ol>
+        <li><a href="#subitem-77">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-47">Header 47</a>
+      <ol>
+        <li><a href="#subitem-78">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-48">Header 48</a>
+      <ol>
+        <li><a href="#subitem-79">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-49">Header 49</a>
+      <ol>
+        <li><a href="#subitem-80">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-50">Header 50</a></li>
+  </ol>
+</nav>
+        </aside>
+        
+
+        <h2 id="intro">Intro</h2>
+<p>Try this example with <code>toc = &quot;floating&quot;</code> and <code>toc = &quot;static&quot;</code>!</p>
+<h2 id="header">Header</h2>
+<h3 id="subitem">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-1">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-2">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-3">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-4">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-5">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-6">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-7">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-8">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-9">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-10">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-11">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-12">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-13">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-14">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-15">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h2 id="header-2">Header 2</h2>
+<h3 id="subitem-16">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-17">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-18">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-19">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-20">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-21">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-22">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-23">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-24">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-25">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-26">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-27">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-28">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-29">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-30">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h3 id="subitem-31">Subitem</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum tempus odio eu consectetur.</p>
+<h2 id="header-1">Header 1</h2>
+<h3 id="subitem-32">Subitem</h3>
+<h2 id="header-2-1">Header 2</h2>
+<h3 id="subitem-33">Subitem</h3>
+<h2 id="header-3">Header 3</h2>
+<h3 id="subitem-34">Subitem</h3>
+<h2 id="header-4">Header 4</h2>
+<h3 id="subitem-35">Subitem</h3>
+<h2 id="header-5">Header 5</h2>
+<h3 id="subitem-36">Subitem</h3>
+<h2 id="header-6">Header 6</h2>
+<h3 id="subitem-37">Subitem</h3>
+<h2 id="header-7">Header 7</h2>
+<h3 id="subitem-38">Subitem</h3>
+<h2 id="header-8">Header 8</h2>
+<h3 id="subitem-39">Subitem</h3>
+<h2 id="header-9">Header 9</h2>
+<h3 id="subitem-40">Subitem</h3>
+<h2 id="header-10">Header 10</h2>
+<h3 id="subitem-41">Subitem</h3>
+<h2 id="header-11">Header 11</h2>
+<h3 id="subitem-42">Subitem</h3>
+<h2 id="header-12">Header 12</h2>
+<h3 id="subitem-43">Subitem</h3>
+<h2 id="header-13">Header 13</h2>
+<h3 id="subitem-44">Subitem</h3>
+<h2 id="header-14">Header 14</h2>
+<h3 id="subitem-45">Subitem</h3>
+<h2 id="header-15">Header 15</h2>
+<h3 id="subitem-46">Subitem</h3>
+<h2 id="header-16">Header 16</h2>
+<h3 id="subitem-47">Subitem</h3>
+<h2 id="header-17">Header 17</h2>
+<h3 id="subitem-48">Subitem</h3>
+<h2 id="header-18">Header 18</h2>
+<h3 id="subitem-49">Subitem</h3>
+<h2 id="header-19">Header 19</h2>
+<h3 id="subitem-50">Subitem</h3>
+<h2 id="header-20">Header 20</h2>
+<h3 id="subitem-51">Subitem</h3>
+<h2 id="header-21">Header 21</h2>
+<h3 id="subitem-52">Subitem</h3>
+<h2 id="header-22">Header 22</h2>
+<h3 id="subitem-53">Subitem</h3>
+<h2 id="header-23">Header 23</h2>
+<h3 id="subitem-54">Subitem</h3>
+<h2 id="header-24">Header 24</h2>
+<h3 id="subitem-55">Subitem</h3>
+<h2 id="header-25">Header 25</h2>
+<h3 id="subitem-56">Subitem</h3>
+<h2 id="header-26">Header 26</h2>
+<h3 id="subitem-57">Subitem</h3>
+<h2 id="header-27">Header 27</h2>
+<h3 id="subitem-58">Subitem</h3>
+<h2 id="header-28">Header 28</h2>
+<h3 id="subitem-59">Subitem</h3>
+<h2 id="header-29">Header 29</h2>
+<h3 id="subitem-60">Subitem</h3>
+<h2 id="header-30">Header 30</h2>
+<h3 id="subitem-61">Subitem</h3>
+<h2 id="header-31">Header 31</h2>
+<h3 id="subitem-62">Subitem</h3>
+<h2 id="header-32">Header 32</h2>
+<h3 id="subitem-63">Subitem</h3>
+<h2 id="header-33">Header 33</h2>
+<h3 id="subitem-64">Subitem</h3>
+<h2 id="header-34">Header 34</h2>
+<h3 id="subitem-65">Subitem</h3>
+<h2 id="header-35">Header 35</h2>
+<h3 id="subitem-66">Subitem</h3>
+<h2 id="header-36">Header 36</h2>
+<h3 id="subitem-67">Subitem</h3>
+<h2 id="header-37">Header 37</h2>
+<h3 id="subitem-68">Subitem</h3>
+<h2 id="header-38">Header 38</h2>
+<h3 id="subitem-69">Subitem</h3>
+<h2 id="header-39">Header 39</h2>
+<h3 id="subitem-70">Subitem</h3>
+<h2 id="header-40">Header 40</h2>
+<h3 id="subitem-71">Subitem</h3>
+<h2 id="header-41">Header 41</h2>
+<h3 id="subitem-72">Subitem</h3>
+<h2 id="header-42">Header 42</h2>
+<h3 id="subitem-73">Subitem</h3>
+<h2 id="header-43">Header 43</h2>
+<h3 id="subitem-74">Subitem</h3>
+<h2 id="header-44">Header 44</h2>
+<h3 id="subitem-75">Subitem</h3>
+<h2 id="header-45">Header 45</h2>
+<h3 id="subitem-76">Subitem</h3>
+<h2 id="header-46">Header 46</h2>
+<h3 id="subitem-77">Subitem</h3>
+<h2 id="header-47">Header 47</h2>
+<h3 id="subitem-78">Subitem</h3>
+<h2 id="header-48">Header 48</h2>
+<h3 id="subitem-79">Subitem</h3>
+<h2 id="header-49">Header 49</h2>
+<h3 id="subitem-80">Subitem</h3>
+<h2 id="header-50">Header 50</h2>
+
+
+    </div>
+    <nav class="hide-on-mobile section-nav">
+        <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#header">Header</a>
+      <ol>
+        <li><a href="#subitem">Subitem</a></li>
+        <li><a href="#subitem-1">Subitem</a></li>
+        <li><a href="#subitem-2">Subitem</a></li>
+        <li><a href="#subitem-3">Subitem</a></li>
+        <li><a href="#subitem-4">Subitem</a></li>
+        <li><a href="#subitem-5">Subitem</a></li>
+        <li><a href="#subitem-6">Subitem</a></li>
+        <li><a href="#subitem-7">Subitem</a></li>
+        <li><a href="#subitem-8">Subitem</a></li>
+        <li><a href="#subitem-9">Subitem</a></li>
+        <li><a href="#subitem-10">Subitem</a></li>
+        <li><a href="#subitem-11">Subitem</a></li>
+        <li><a href="#subitem-12">Subitem</a></li>
+        <li><a href="#subitem-13">Subitem</a></li>
+        <li><a href="#subitem-14">Subitem</a></li>
+        <li><a href="#subitem-15">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-2">Header 2</a>
+      <ol>
+        <li><a href="#subitem-16">Subitem</a></li>
+        <li><a href="#subitem-17">Subitem</a></li>
+        <li><a href="#subitem-18">Subitem</a></li>
+        <li><a href="#subitem-19">Subitem</a></li>
+        <li><a href="#subitem-20">Subitem</a></li>
+        <li><a href="#subitem-21">Subitem</a></li>
+        <li><a href="#subitem-22">Subitem</a></li>
+        <li><a href="#subitem-23">Subitem</a></li>
+        <li><a href="#subitem-24">Subitem</a></li>
+        <li><a href="#subitem-25">Subitem</a></li>
+        <li><a href="#subitem-26">Subitem</a></li>
+        <li><a href="#subitem-27">Subitem</a></li>
+        <li><a href="#subitem-28">Subitem</a></li>
+        <li><a href="#subitem-29">Subitem</a></li>
+        <li><a href="#subitem-30">Subitem</a></li>
+        <li><a href="#subitem-31">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-1">Header 1</a>
+      <ol>
+        <li><a href="#subitem-32">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-2-1">Header 2</a>
+      <ol>
+        <li><a href="#subitem-33">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-3">Header 3</a>
+      <ol>
+        <li><a href="#subitem-34">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-4">Header 4</a>
+      <ol>
+        <li><a href="#subitem-35">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-5">Header 5</a>
+      <ol>
+        <li><a href="#subitem-36">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-6">Header 6</a>
+      <ol>
+        <li><a href="#subitem-37">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-7">Header 7</a>
+      <ol>
+        <li><a href="#subitem-38">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-8">Header 8</a>
+      <ol>
+        <li><a href="#subitem-39">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-9">Header 9</a>
+      <ol>
+        <li><a href="#subitem-40">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-10">Header 10</a>
+      <ol>
+        <li><a href="#subitem-41">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-11">Header 11</a>
+      <ol>
+        <li><a href="#subitem-42">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-12">Header 12</a>
+      <ol>
+        <li><a href="#subitem-43">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-13">Header 13</a>
+      <ol>
+        <li><a href="#subitem-44">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-14">Header 14</a>
+      <ol>
+        <li><a href="#subitem-45">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-15">Header 15</a>
+      <ol>
+        <li><a href="#subitem-46">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-16">Header 16</a>
+      <ol>
+        <li><a href="#subitem-47">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-17">Header 17</a>
+      <ol>
+        <li><a href="#subitem-48">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-18">Header 18</a>
+      <ol>
+        <li><a href="#subitem-49">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-19">Header 19</a>
+      <ol>
+        <li><a href="#subitem-50">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-20">Header 20</a>
+      <ol>
+        <li><a href="#subitem-51">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-21">Header 21</a>
+      <ol>
+        <li><a href="#subitem-52">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-22">Header 22</a>
+      <ol>
+        <li><a href="#subitem-53">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-23">Header 23</a>
+      <ol>
+        <li><a href="#subitem-54">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-24">Header 24</a>
+      <ol>
+        <li><a href="#subitem-55">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-25">Header 25</a>
+      <ol>
+        <li><a href="#subitem-56">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-26">Header 26</a>
+      <ol>
+        <li><a href="#subitem-57">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-27">Header 27</a>
+      <ol>
+        <li><a href="#subitem-58">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-28">Header 28</a>
+      <ol>
+        <li><a href="#subitem-59">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-29">Header 29</a>
+      <ol>
+        <li><a href="#subitem-60">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-30">Header 30</a>
+      <ol>
+        <li><a href="#subitem-61">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-31">Header 31</a>
+      <ol>
+        <li><a href="#subitem-62">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-32">Header 32</a>
+      <ol>
+        <li><a href="#subitem-63">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-33">Header 33</a>
+      <ol>
+        <li><a href="#subitem-64">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-34">Header 34</a>
+      <ol>
+        <li><a href="#subitem-65">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-35">Header 35</a>
+      <ol>
+        <li><a href="#subitem-66">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-36">Header 36</a>
+      <ol>
+        <li><a href="#subitem-67">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-37">Header 37</a>
+      <ol>
+        <li><a href="#subitem-68">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-38">Header 38</a>
+      <ol>
+        <li><a href="#subitem-69">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-39">Header 39</a>
+      <ol>
+        <li><a href="#subitem-70">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-40">Header 40</a>
+      <ol>
+        <li><a href="#subitem-71">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-41">Header 41</a>
+      <ol>
+        <li><a href="#subitem-72">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-42">Header 42</a>
+      <ol>
+        <li><a href="#subitem-73">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-43">Header 43</a>
+      <ol>
+        <li><a href="#subitem-74">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-44">Header 44</a>
+      <ol>
+        <li><a href="#subitem-75">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-45">Header 45</a>
+      <ol>
+        <li><a href="#subitem-76">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-46">Header 46</a>
+      <ol>
+        <li><a href="#subitem-77">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-47">Header 47</a>
+      <ol>
+        <li><a href="#subitem-78">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-48">Header 48</a>
+      <ol>
+        <li><a href="#subitem-79">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-49">Header 49</a>
+      <ol>
+        <li><a href="#subitem-80">Subitem</a></li>
+      </ol>
+    </li>
+    <li><a href="#header-50">Header 50</a></li>
+  </ol>
+</nav>
+    </nav>
+</div>
+<div class="post">
+    <hr class="footer-separator" />
+<div class="tags">
+    
+    
+    <ul class="flat">
+        
+        
+        <li class="tag-li"><a href="/tags/markdown">markdown</a>
+        </li>
+        
+        
+        <li class="tag-li"><a href="/tags/css">css</a>
+        </li>
+        
+        
+        <li class="tag-li"><a href="/tags/html">html</a>
+        </li>
+        
+        
+        <li class="tag-li"><a href="/tags/themes">themes</a>
+        </li>
+        
+    </ul>
+    
+    
+</div>
+
+
+<div class="back">
+    <a href="https://github.com/behouba/blob/master/content/posts/post-9.md" title="github"><i
+            data-feather="github"></i> Edit this on GitHub</a>
+</div>
+
+
+<div class="back">
+    <a href="//localhost:1313/"><span aria-hidden="true">← Back</span></a>
+</div>
+
+
+<div class="back">
+    
+    
+    Next time, we'll talk about <i>"What Tiger King can teach us about x86 Assembly"</i>
+    
+    
+</div>
+
+</div>
+
+	</div>
+	
+
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2023  © Behouba Manassé Kouamé </div>
+		
+	</nav>
+</div><script>feather.replace()</script>
+
+	
+	<script>
+    var enableTruncate =  true 
+    var filterDepth = false;
+    const MAX_DEPTH = 9; 
+
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+            entries.reverse().forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    var selected = document.querySelectorAll(`nav li a[href="#${id}"]`)
+                    if (selected != null) {
+                        selected.forEach(s => {
+                            if (s != null) {
+                                var depth = getDepth(s.parentElement);
+                                if (filterDepth && depth <= MAX_DEPTH) {
+                                    clearActiveStatesInTableOfContents();
+                                    s.parentElement.classList.add('active')
+                                }
+                            } else if (!filterDepth) {
+                                clearActiveStatesInTableOfContents();
+                                s.parentElement.classList.add('active');
+                            }
+                        }
+                        )
+                    }
+
+                }
+            });
+        });
+        document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
+            observerForTableOfContentActiveState.observe(section);
+        });
+
+    });
+
+    
+    function isVisible(elem) {
+        if (!(elem instanceof Element)) return false; 
+        const style = getComputedStyle(elem);
+        if (style.display === 'none') return false;
+        if (style.visibility !== 'visible') return false;
+        if (style.opacity < 0.1) return false;
+        if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+            elem.getBoundingClientRect().width === 0) {
+            return false;
+        }
+        const elemCenter = {
+            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+        };
+        if (elemCenter.x < 0) return false;
+        if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+        if (elemCenter.y < 0) return false;
+        if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+        let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+        do {
+            if (pointContainer === elem) return true;
+        } while (pointContainer = pointContainer.parentNode);
+        return false;
+    }
+
+
+    function clearActiveStatesInTableOfContents() {
+        document.querySelectorAll('nav li').forEach((section) => {
+            section.classList.remove('active');
+        });
+    }
+
+    function getDepth(parentElement) {
+        var depth = 0;
+        while (parentElement !== null && parentElement.tagName.toLowerCase() !== 'ul') {
+            depth++;
+            parentElement = parentElement.parentElement;
+        }
+        return depth;
+    }
+
+    function navItems() {
+        
+        var nestedListItems = document.querySelectorAll('nav nav li a');
+        return Array.from(nestedListItems).filter(listItem =>
+            listItem.href != null && listItem.hash.startsWith("#")
+        )
+    }
+
+    function lasItemInNavBarVisible() {
+        var lastItem = navItems().slice(-1)[0]
+        return isVisible(lastItem)
+    }
+
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!enableTruncate) return;
+        var navBar = navItems()
+        console.log(navBar)
+        if (!lasItemInNavBarVisible()) {
+            filterDepth = true;
+            
+            navBar.forEach(function (listItem) {
+                var depth = getDepth(listItem.parentElement);
+
+                if (depth > MAX_DEPTH) {
+                    listItem.parentElement.classList.add('depth-nested');
+                }
+            });
+        }
+
+    });
+
+</script>
+
+	
+</body>
+
+</html>
