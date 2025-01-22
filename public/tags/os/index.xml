@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OS on Behouba Manassé Kouamé</title>
-    <link>behouba.github.io/tags/os/</link>
+    <link>https://behouba.github.io/tags/os/</link>
     <description>Recent content in OS on Behouba Manassé Kouamé</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Behouba Manassé Kouamé</copyright>
     <lastBuildDate>Sun, 14 Aug 2022 18:45:52 +0300</lastBuildDate>
-    <atom:link href="behouba.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://behouba.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Discovering Kernel Fuzzing</title>
-      <link>behouba.github.io/2022/08/discovering-kernel-fuzzing/</link>
+      <link>https://behouba.github.io/2022/08/discovering-kernel-fuzzing/</link>
       <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
-      <guid>behouba.github.io/2022/08/discovering-kernel-fuzzing/</guid>
+      <guid>https://behouba.github.io/2022/08/discovering-kernel-fuzzing/</guid>
       <description>This year, during an industrial project that is part of my master&amp;rsquo;s program, I had the opportunity to make my first steps into the world of kernel fuzzing. This was a great learning experience, during which I had the opportunity to work with wonderful people. In this blog post, I will describe my journey into the world of kernel fuzzing.&#xA;I have to admit that I didn&amp;rsquo;t know anything about fuzzing when I was finishing my first semester of the Master of Software Engineering at Innopolis University.</description>
     </item>
   </channel>

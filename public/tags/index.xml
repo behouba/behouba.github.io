@@ -2,81 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Behouba Manassé Kouamé</title>
-    <link>behouba.github.io/tags/</link>
+    <link>https://behouba.github.io/tags/</link>
     <description>Recent content in Tags on Behouba Manassé Kouamé</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Behouba Manassé Kouamé</copyright>
     <lastBuildDate>Tue, 03 Oct 2023 11:25:52 +0300</lastBuildDate>
-    <atom:link href="behouba.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Checkpoint/Restore</title>
-      <link>behouba.github.io/tags/checkpoint/restore/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/checkpoint/restore/</guid>
-      <description></description>
-    </item>
+    <atom:link href="https://behouba.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Container</title>
-      <link>behouba.github.io/tags/container/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/container/</guid>
+      <link>https://behouba.github.io/tags/container/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/container/</guid>
       <description></description>
     </item>
     <item>
       <title>CRIU</title>
-      <link>behouba.github.io/tags/criu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/criu/</guid>
+      <link>https://behouba.github.io/tags/criu/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/criu/</guid>
       <description></description>
     </item>
     <item>
       <title>Cybersecurity</title>
-      <link>behouba.github.io/tags/cybersecurity/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/cybersecurity/</guid>
+      <link>https://behouba.github.io/tags/cybersecurity/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>behouba.github.io/tags/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/docker/</guid>
+      <link>https://behouba.github.io/tags/docker/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Golang</title>
-      <link>behouba.github.io/tags/golang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/golang/</guid>
+      <link>https://behouba.github.io/tags/golang/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/golang/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>behouba.github.io/tags/linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/linux/</guid>
+      <link>https://behouba.github.io/tags/linux/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Podman</title>
-      <link>behouba.github.io/tags/podman/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/podman/</guid>
+      <link>https://behouba.github.io/tags/podman/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/podman/</guid>
       <description></description>
     </item>
     <item>
       <title>Fuzzing</title>
-      <link>behouba.github.io/tags/fuzzing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/fuzzing/</guid>
+      <link>https://behouba.github.io/tags/fuzzing/</link>
+      <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/fuzzing/</guid>
       <description></description>
     </item>
     <item>
       <title>OS</title>
-      <link>behouba.github.io/tags/os/</link>
+      <link>https://behouba.github.io/tags/os/</link>
+      <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
+      <guid>https://behouba.github.io/tags/os/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Checkpoint/Restore</title>
+      <link>https://behouba.github.io/tags/checkpoint/restore/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>behouba.github.io/tags/os/</guid>
+      <guid>https://behouba.github.io/tags/checkpoint/restore/</guid>
       <description></description>
     </item>
   </channel>
