@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Behouba Manassé Kouamé</title>
+    <title>Posts on Behouba Manassé K</title>
     <link>https://behouba.github.io/posts/</link>
-    <description>Recent content in Posts on Behouba Manassé Kouamé</description>
+    <description>Recent content in Posts on Behouba Manassé K</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Behouba Manassé Kouamé</copyright>
@@ -22,6 +22,13 @@
       <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
       <guid>https://behouba.github.io/2022/08/discovering-kernel-fuzzing/</guid>
       <description>This year, during an industrial project that is part of my master&amp;rsquo;s program, I had the opportunity to make my first steps into the world of kernel fuzzing. This was a great learning experience, during which I had the opportunity to work with wonderful people. In this blog post, I will describe my journey into the world of kernel fuzzing.&#xA;I have to admit that I didn&amp;rsquo;t know anything about fuzzing when I was finishing my first semester of the Master of Software Engineering at Innopolis University.</description>
+    </item>
+    <item>
+      <title>What Happens When You Boot Your LInux System</title>
+      <link>https://behouba.github.io/2020/03/what-happens-when-you-boot-your-linux-system/</link>
+      <pubDate>Sat, 14 Mar 2020 18:45:52 +0100</pubDate>
+      <guid>https://behouba.github.io/2020/03/what-happens-when-you-boot-your-linux-system/</guid>
+      <description>Have you ever wondered what’s really going on when you press the power button on your Linux machine? I mean, sure, you see your distribution logo, maybe a loading spinner, and then the login screen. But what’s happening under the hood? Let’s take a journey together, from the moment you hit that power button to when you’re greeted by the login screen. I’ll explain this process for Fedora which is my favorite Linux distribution!</description>
     </item>
   </channel>
 </rss>

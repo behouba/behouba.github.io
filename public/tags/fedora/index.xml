@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fedora on Behouba Manassé K</title>
+    <link>https://behouba.github.io/tags/fedora/</link>
+    <description>Recent content in Fedora on Behouba Manassé K</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Behouba Manassé Kouamé</copyright>
+    <lastBuildDate>Sat, 14 Mar 2020 18:45:52 +0100</lastBuildDate>
+    <atom:link href="https://behouba.github.io/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Happens When You Boot Your LInux System</title>
+      <link>https://behouba.github.io/2020/03/what-happens-when-you-boot-your-linux-system/</link>
+      <pubDate>Sat, 14 Mar 2020 18:45:52 +0100</pubDate>
+      <guid>https://behouba.github.io/2020/03/what-happens-when-you-boot-your-linux-system/</guid>
+      <description>Have you ever wondered what’s really going on when you press the power button on your Linux machine? I mean, sure, you see your distribution logo, maybe a loading spinner, and then the login screen. But what’s happening under the hood? Let’s take a journey together, from the moment you hit that power button to when you’re greeted by the login screen. I’ll explain this process for Fedora which is my favorite Linux distribution!</description>
+    </item>
+  </channel>
+</rss>

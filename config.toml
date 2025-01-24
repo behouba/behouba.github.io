@@ -1,6 +1,6 @@
 baseURL = "https://behouba.github.io/"
 languageCode = "en-us"
-title = "Behouba Manassé Kouamé"
+title = "Behouba Manassé K"
 theme = "ink-free"
 paginate = 7
 
@@ -12,7 +12,7 @@ copyright = "© Behouba Manassé Kouamé"
   posts = "/:year/:month/:title"
 
 [params]
-	subtitle = "I am a Software Engineer and Master’s student at Polytechnique Montréal, with a strong interest in cloud computing, distributed systems, and software security"
+	subtitle = "Software engineering, Linux, cloud computing, and random topics I enjoy."
 
 	# Optional 64x64 avatar image.
 	#avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
@@ -36,41 +36,12 @@ copyright = "© Behouba Manassé Kouamé"
 	# Define words per minute to approximate reading time
 	wpm = 250
 
-	# Stupid footers :)
-	footers = [
-		"What Tiger King can teach us about x86 Assembly",
-		"10 Reasons why gcc SHOULD be re-written in JavaScript - You won't believe #8!"
-	]
-
-	# Github base url
-	github = "https://github.com/behouba"
-
 	# For statistics, we can compare the total word count against a book of your choice
 	statisticsEnabled = true
 	referenceBookWords = 11500.0
 	referenceBook = "The Metamorphosis"
 	referenceAuthor = "Franz Kafka"
 
-# Nav.
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "All posts"
-url = "/posts"
-weight = 2
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
-
-[[menu.main]]
-name = "Tags & Stats"
-url = "/tags"
-weight = 4
 
 [[params.social]]
 name = "Github"
