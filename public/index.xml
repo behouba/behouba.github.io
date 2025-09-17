@@ -6,7 +6,36 @@
     <description>Recent content in Behouba Manassé Kouamé on Behouba Manassé K</description>
     <generator>Hugo -- gohugo.io</generator>
       <language>en-us</language>
-      <lastBuildDate>Tue, 03 Oct 2023 11:25:52 +0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+      <lastBuildDate>Sat, 19 Apr 2025 21:37:58 +0530</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Talks and Presentations</title>
+      <link>http://localhost:1313/presentations/</link>
+      <pubDate>Sat, 19 Apr 2025 21:37:58 +0530</pubDate>
+
+      <guid>http://localhost:1313/presentations/</guid>
+      <description>&lt;h2 id=&#34;gsoc-2025-final-presentationhttpsdocsgooglecompresentationde2pacx-1vtnv6nobjjlgwh9wr555wjvc8k1jyhtcj9gehsfxlrue91yrxesphw2gtykzsuj1l907z_cic6pqhiopubstartfalseloopfalsedelayms3000slideidg37d0ce618b0_0_0&#34;&gt;
+  &lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTNV6nObjjlGwH9wR555WJVC8k1jYhTCJ9GeHsFXlRUe91YRXESPHw2GtYKzsUJ1l907z_cic6PQHio/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000#slide=id.g37d0ce618b0_0_0&#34;&gt;GSoC 2025 final presentation&lt;/a&gt;
+  &lt;a href=&#34;#gsoc-2025-final-presentationhttpsdocsgooglecompresentationde2pacx-1vtnv6nobjjlgwh9wr555wjvc8k1jyhtcj9gehsfxlrue91yrxesphw2gtykzsuj1l907z_cic6pqhiopubstartfalseloopfalsedelayms3000slideidg37d0ce618b0_0_0&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Date: September 17, 2025&lt;/li&gt;
+&lt;li&gt;Event: Google Summer of Code 2025 final presentation&lt;/li&gt;
+&lt;li&gt;Description: Final presentation of my work on criu-coordinator during GSoC 2025.&lt;/li&gt;
+&lt;li&gt;Youtube: &lt;a href=&#34;https://www.youtube.com/watch?v=fzXDqbq2X3s&amp;amp;ab_channel=RadostinStoyanov&#34;&gt;Watch here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <content>
+&lt;h2 id=&#34;gsoc-2025-final-presentationhttpsdocsgooglecompresentationde2pacx-1vtnv6nobjjlgwh9wr555wjvc8k1jyhtcj9gehsfxlrue91yrxesphw2gtykzsuj1l907z_cic6pqhiopubstartfalseloopfalsedelayms3000slideidg37d0ce618b0_0_0&#34;&gt;
+  &lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTNV6nObjjlGwH9wR555WJVC8k1jYhTCJ9GeHsFXlRUe91YRXESPHw2GtYKzsUJ1l907z_cic6PQHio/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000#slide=id.g37d0ce618b0_0_0&#34;&gt;GSoC 2025 final presentation&lt;/a&gt;
+  &lt;a href=&#34;#gsoc-2025-final-presentationhttpsdocsgooglecompresentationde2pacx-1vtnv6nobjjlgwh9wr555wjvc8k1jyhtcj9gehsfxlrue91yrxesphw2gtykzsuj1l907z_cic6pqhiopubstartfalseloopfalsedelayms3000slideidg37d0ce618b0_0_0&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Date: September 17, 2025&lt;/li&gt;
+&lt;li&gt;Event: Google Summer of Code 2025 final presentation&lt;/li&gt;
+&lt;li&gt;Description: Final presentation of my work on criu-coordinator during GSoC 2025.&lt;/li&gt;
+&lt;li&gt;Youtube: &lt;a href=&#34;https://www.youtube.com/watch?v=fzXDqbq2X3s&amp;amp;ab_channel=RadostinStoyanov&#34;&gt;Watch here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
     <item>
       <title>Memory Forensics analysis of container checkpoints with checkpointctl</title>
       <link>http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/</link>
