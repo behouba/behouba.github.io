@@ -1,90 +1,111 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Memory Forensics analysis of container checkpoints with checkpointctl - Behouba Manassé K</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="Memory Forensics analysis of container checkpoints with checkpointctl">
-<meta itemprop="description" content="Introduction In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems."><meta itemprop="datePublished" content="2023-10-03T11:25:52+03:00" />
-<meta itemprop="dateModified" content="2023-10-03T11:25:52+03:00" />
-<meta itemprop="wordCount" content="1095">
-<meta itemprop="keywords" content="CRIU,Cybersecurity,Container,Docker,Podman,Checkpoint/Restore,Golang,Linux," /><meta property="og:title" content="Memory Forensics analysis of container checkpoints with checkpointctl" />
-<meta property="og:description" content="Introduction In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://behouba.github.io/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-10-03T11:25:52+03:00" />
-<meta property="article:modified_time" content="2023-10-03T11:25:52+03:00" />
-
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Memory Forensics analysis of container checkpoints with checkpointctl"/>
-<meta name="twitter:description" content="Introduction In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems."/>
-<link rel="stylesheet" type="text/css" media="screen" href="https://behouba.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://behouba.github.io/css/main.css" />
-
-	<link id="dark-scheme" rel="stylesheet" type="text/css" href="https://behouba.github.io/css/dark.css" />
-
-	<script src="https://behouba.github.io/js/feather.min.js"></script>
-	
-	<script src="https://behouba.github.io/js/main.js"></script>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<title>Memory Forensics analysis of container checkpoints with checkpointctl :: Behouba Manassé K</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content=" Introduction In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems. In recent years, containerized applications have become popular. Containers are not immune to cyberattacks, and when there are suspicious malicious activities, it may be useful to be able to investigate our container without disturbing the operation of that container. This is when checkpoinctl came in handy. checkpointcl is CLI project from the open-source organization CRIU (Checkpoint Restore In Userspace) that makes it easy to inspect container checkpoints created by CRIU. In this article, we will see how checkpointcl can be used as a forensic analysis tool for container checkpoints.
+" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/" />
+<meta property="og:locale" content="en" />
+<meta property="og:title" content="Memory Forensics analysis of container checkpoints with checkpointctl :: Behouba Manassé K" />
+<meta property="og:description" content=" Introduction In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems. In recent years, containerized applications have become popular. Containers are not immune to cyberattacks, and when there are suspicious malicious activities, it may be useful to be able to investigate our container without disturbing the operation of that container. This is when checkpoinctl came in handy. checkpointcl is CLI project from the open-source organization CRIU (Checkpoint Restore In Userspace) that makes it easy to inspect container checkpoints created by CRIU. In this article, we will see how checkpointcl can be used as a forensic analysis tool for container checkpoints.
+" />
+  <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-10-03 11:25:52 &#43;0300 &#43;0300" />
+    <meta property="article:modified_time" content="2023-10-03 11:25:52 &#43;0300" />
+  <meta property="article:author" content="Kouame Behouba Manassé" />
+<meta property="og:url" content="http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/" />
+<meta property="og:site_name" content="Behouba Manassé K" />
+<meta property="og:image" content="/images/favicons/favicon.ico" />
+<meta property="og:image:width" content="2048" />
+<meta property="og:image:height" content="1024" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicons/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto+Slab:wght@300;400;500&family=Ubuntu+Mono:ital@0;1&display=swap"
+  rel="stylesheet"
+/>
+<link href="http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/" rel="alternate" type="application/rss+xml" title="Behouba Manassé K" />
+<link rel="stylesheet" href="http://localhost:1313/styles.css" />
 </head>
 
-<body>
-
-
-	
-	<div class="container-wide wrapper">
-		<div class="header">
-	
-	<h1 class="site-title"><a href="https://behouba.github.io/">Behouba Manassé K</a></h1>
-	<div class="site-description"><p>Software engineering, Linux, cloud computing, and random topics I enjoy.</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/behouba" title="Github"><i data-feather="github"></i></a></li><li><a href="https://twitter.com/behouba_" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-		
-<div class="article-nav" id="article-nav-id">
-    <div class="post">
-        <div class="post-header">
-    
-    <div class="meta">
-        <div class="date">
-            <span class="day">03</span>
-            <span class="rest">Oct 2023</span>
+  <body>
+    <div class="theme-container">
+      <div class="container center">
+        <header class="site-header">
+<nav class="navbar">
+  <div class="navbar__first">
+    <ul class="navbar__list borders">
+      <li><a href="http://localhost:1313/">Home</a></li>
+      <li>
+        <button class="theme-toggle transparent"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+</button>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar__separator"></div>
+    <div class="navbar__last">
+      <ul class="navbar__list borders menu--desktop"></ul>
+      <ul class="menu menu--mobile">
+        <li class="menu-trigger">===</li>
+        <li>
+          <ul class="menu-dropdown"></ul>
+        </li>
+      </ul>
+    </div>
+</nav>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+    <a href="http://localhost:1313/">Home</a>&nbsp;/&nbsp;
+        <a href="http://localhost:1313/posts/">Posts</a>
+  </nav>
+</header>
+        <main class="site-main"><article class="post">
+    <header class="post-header">
+        <h1 class="post-title"><a href="http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/">Memory Forensics analysis of container checkpoints with checkpointctl</a></h1>
+        <div class="post-meta">
+            <time pubdate datetime="2023-10-03 11:25:52 &#43;0300">
+              Published on
+              2023-10-03 11:25:52 &#43;0300
+            </time>
+            <span>by Kouame Behouba Manassé</span>
+            <time pubdate datetime="2023-10-03 11:25:52 &#43;0300"> last modified 2023-10-03 11:25:52 &#43;0300. </time>
         </div>
-    </div>
-    
-    <div class="matter">
-        <h1 class="title">Memory Forensics analysis of container checkpoints with checkpointctl</h1>
-    </div>
-</div>
-
-
-        
-        
-        <aside class="toc" id="static-toc">
-            <header>
-                <h3>Contents</h3>
-            </header>
-            <nav id="TableOfContents">
-  <ol>
+        <p class="post-tags">Tags:&nbsp;#<a href="http://localhost:1313/tags/criu/">CRIU</a>&nbsp;#<a href="http://localhost:1313/tags/cybersecurity/">Cybersecurity</a>&nbsp;#<a href="http://localhost:1313/tags/container/">Container</a>&nbsp;#<a href="http://localhost:1313/tags/docker/">Docker</a>&nbsp;#<a href="http://localhost:1313/tags/podman/">Podman</a>&nbsp;#<a href="http://localhost:1313/tags/checkpoint/restore/">Checkpoint/Restore</a>&nbsp;#<a href="http://localhost:1313/tags/golang/">Golang</a>&nbsp;#<a href="http://localhost:1313/tags/linux/">Linux</a>&nbsp;</p>
+    </header>
+      <div class="post-toc">
+        <h2>Table of Contents</h2>
+        <nav id="TableOfContents">
+  <ul>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#prerequisite">Prerequisite</a></li>
     <li><a href="#creating-a-container-checkpoint">Creating a container checkpoint</a></li>
     <li><a href="#checkpoint-analysis-with-checkpointctl">Checkpoint analysis with <code>checkpointctl</code></a></li>
     <li><a href="#conclusion">Conclusion</a></li>
-  </ol>
+  </ul>
 </nav>
-        </aside>
+      </div>
+      <div class="post-content">
         
-
-        <h2 id="introduction">Introduction</h2>
+<h2 id="introduction">
+  Introduction
+  <a href="#introduction" class="hanchor" ariaLabel="Anchor"></a>
+</h2>
 <p>In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems. In recent years, containerized applications have become popular. Containers are not immune to cyberattacks, and when there are suspicious malicious activities, it may be useful to be able to investigate our container without disturbing the operation of that container. This is when <code>checkpoinctl</code> came in handy. <code>checkpointcl</code> is CLI project from the open-source organization CRIU (Checkpoint Restore In Userspace) that makes it easy to inspect container checkpoints created by CRIU. In this article, we will see how <code>checkpointcl</code> can be used as a forensic analysis tool for container checkpoints.</p>
-<h2 id="prerequisite">Prerequisite</h2>
+
+<h2 id="prerequisite">
+  Prerequisite
+  <a href="#prerequisite" class="hanchor" ariaLabel="Anchor"></a>
+</h2>
 <ul>
 <li>
 <p>A Linux operating system</p>
@@ -99,466 +120,270 @@
 <p><a href="https://github.com/checkpoint-restore/checkpointctl">checkpointcl</a></p>
 </li>
 </ul>
-<h2 id="creating-a-container-checkpoint">Creating a container checkpoint</h2>
+
+<h2 id="creating-a-container-checkpoint">
+  Creating a container checkpoint
+  <a href="#creating-a-container-checkpoint" class="hanchor" ariaLabel="Anchor"></a>
+</h2>
 <p>We start by starting a Postgres container with Podman:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman run --name postgres -d -e <span style="color:#008080">POSTGRES_PASSWORD</span><span style="color:#000;font-weight:bold">=</span>secret_password postgres
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Because checkpoints currently work with root containers only, it is necessary to run the Postgres container as root. I have switched to root for all the examples in this tutorial. Alternatively, you can prefix your commands with <code>sudo</code> to achieve the same effect.</p>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">podman run --name postgres -d -e <span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>secret_password postgres</span></span></code></pre></div></div>
+<p>Because checkpoints currently work with root containers only, it is necessary to run the Postgres container as root. I have switched to root for all the examples in this tutorial. Alternatively, you can prefix your commands with <code>sudo</code> to achieve the same effect.</p>
 <p>Create a checkpoint for the container:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir checkpoints
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">cd</span> checkpoints
-</span></span><span style="display:flex;"><span>podman container checkpoint postgres --leave-running --export postgres-checkpoint.tar.gz
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls postgres-checkpoint.tar.gz
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Install <code>checkpointctl</code></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go install github.com/checkpoint-restore/checkpointctl@main
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Verify the installation:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkpointctl --help
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="checkpoint-analysis-with-checkpointctl">Checkpoint analysis with <code>checkpointctl</code></h2>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir checkpoints
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> checkpoints
+</span></span><span class="line"><span class="cl">podman container checkpoint postgres --leave-running --export postgres-checkpoint.tar.gz</span></span></code></pre></div></div>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls postgres-checkpoint.tar.gz</span></span></code></pre></div></div>
+<p>Install <code>checkpointctl</code></p>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go install github.com/checkpoint-restore/checkpointctl@main</span></span></code></pre></div></div>
+<p>Verify the installation:</p>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">checkpointctl --help</span></span></code></pre></div></div>
+
+<h2 id="checkpoint-analysis-with-checkpointctl">
+  Checkpoint analysis with <code>checkpointctl</code>
+  <a href="#checkpoint-analysis-with-checkpointctl" class="hanchor" ariaLabel="Anchor"></a>
+</h2>
 <p>Use <code>show</code> subcommand to get an overview of the checkpoint.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkpointctl show postgres-checkpoint.tar.gz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Displaying container checkpoint data from postgres-checkpoint.tar.gz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
-</span></span><span style="display:flex;"><span>| CONTAINER |               IMAGE               |      ID      | RUNTIME |          CREATED          | ENGINE | CHKPT SIZE | ROOT FS DIFF SIZE |
-</span></span><span style="display:flex;"><span>+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
-</span></span><span style="display:flex;"><span>| postgres  | docker.io/library/postgres:latest | e95b555d040d | crun    | 2024-01-28T14:37:56-05:00 | Podman | 27.3 MiB   | 2.0 KiB           |
-</span></span><span style="display:flex;"><span>+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Use <code>inspect</code> subcommand to get more detailed information about the container checkpoint.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkpointctl inspect postgres-checkpoint.tar.gz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Displaying container checkpoint tree view from postgres-checkpoint.tar.gz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>postgres
-</span></span><span style="display:flex;"><span>├── Image: docker.io/library/postgres:latest
-</span></span><span style="display:flex;"><span>├── ID: e95b555d040dcb2f61c3c8f62511827e58b8733456f3ec797c4a846c4bd7ac8c
-</span></span><span style="display:flex;"><span>├── Runtime: crun
-</span></span><span style="display:flex;"><span>├── Created: 2024-01-28T14:37:56-05:00
-</span></span><span style="display:flex;"><span>├── Engine: Podman
-</span></span><span style="display:flex;"><span>├── Checkpoint size: 27.3 MiB
-</span></span><span style="display:flex;"><span>│   └── Memory pages size: 27.2 MiB
-</span></span><span style="display:flex;"><span>└── Root FS diff size: 2.0 KiB
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>To see the process tree of the container, add the <code>--ps-tree</code> option:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkpointctl inspect postgres-checkpoint.tar.gz --ps-tree
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Displaying container checkpoint tree view from postgres-checkpoint.tar.gz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>postgres
-</span></span><span style="display:flex;"><span>├── Image: docker.io/library/postgres:latest
-</span></span><span style="display:flex;"><span>├── ID: e95b555d040dcb2f61c3c8f62511827e58b8733456f3ec797c4a846c4bd7ac8c
-</span></span><span style="display:flex;"><span>├── Runtime: crun
-</span></span><span style="display:flex;"><span>├── Created: 2024-01-28T14:37:56-05:00
-</span></span><span style="display:flex;"><span>├── Engine: Podman
-</span></span><span style="display:flex;"><span>├── Checkpoint size: 27.3 MiB
-</span></span><span style="display:flex;"><span>│   └── Memory pages size: 27.2 MiB
-</span></span><span style="display:flex;"><span>├── Root FS diff size: 2.0 KiB
-</span></span><span style="display:flex;"><span>└── Process tree
-</span></span><span style="display:flex;"><span>    └── <span style="color:#000;font-weight:bold">[</span>1<span style="color:#000;font-weight:bold">]</span>  postgres
-</span></span><span style="display:flex;"><span>        ├── <span style="color:#000;font-weight:bold">[</span>55<span style="color:#000;font-weight:bold">]</span>  postgres
-</span></span><span style="display:flex;"><span>        ├── <span style="color:#000;font-weight:bold">[</span>56<span style="color:#000;font-weight:bold">]</span>  postgres
-</span></span><span style="display:flex;"><span>        ├── <span style="color:#000;font-weight:bold">[</span>58<span style="color:#000;font-weight:bold">]</span>  postgres
-</span></span><span style="display:flex;"><span>        ├── <span style="color:#000;font-weight:bold">[</span>59<span style="color:#000;font-weight:bold">]</span>  postgres
-</span></span><span style="display:flex;"><span>        └── <span style="color:#000;font-weight:bold">[</span>60<span style="color:#000;font-weight:bold">]</span>  postgres
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>The <code>inspect</code> subcommand provides additional capabilities, so refer to the command-line documentation for more details:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkpointctl inspect --help
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Finally, you can use <code>memparse</code> subcommand to read the contents of the memory pages of the container checkpoint to get a more in-depth overview of the state of the container when it was checkpointed.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkpointctl memparse postgres-checkpoint.tar.gz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Displaying processes memory sizes from postgres-checkpoint.tar.gz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>+-----+--------------+-------------+--------------------+
-</span></span><span style="display:flex;"><span>| PID | PROCESS NAME | MEMORY SIZE | SHARED MEMORY SIZE |
-</span></span><span style="display:flex;"><span>+-----+--------------+-------------+--------------------+
-</span></span><span style="display:flex;"><span>|   <span style="color:#099">1</span> | postgres     | 2.3 MiB     | 142.6 MiB          |
-</span></span><span style="display:flex;"><span>+-----+--------------+-------------+--------------------+
-</span></span><span style="display:flex;"><span>|  <span style="color:#099">55</span> | postgres     | 2.3 MiB     | 142.6 MiB          |
-</span></span><span style="display:flex;"><span>+-----+--------------+-------------+--------------------+
-</span></span><span style="display:flex;"><span>|  <span style="color:#099">56</span> | postgres     | 2.3 MiB     | 142.6 MiB          |
-</span></span><span style="display:flex;"><span>+-----+--------------+-------------+--------------------+
-</span></span><span style="display:flex;"><span>|  <span style="color:#099">58</span> | postgres     | 2.3 MiB     | 142.6 MiB          |
-</span></span><span style="display:flex;"><span>+-----+--------------+-------------+--------------------+
-</span></span><span style="display:flex;"><span>|  <span style="color:#099">59</span> | postgres     | 2.6 MiB     | 143.6 MiB          |
-</span></span><span style="display:flex;"><span>+-----+--------------+-------------+--------------------+
-</span></span><span style="display:flex;"><span>|  <span style="color:#099">60</span> | postgres     | 2.5 MiB     | 143.6 MiB          |
-</span></span><span style="display:flex;"><span>+-----+--------------+-------------+--------------------+
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>To display the contents of memory pages for a specific process (e.g., PID 1), use:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkpointctl memparse postgres-checkpoint.tar.gz --pid<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span> | less
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Displaying memory pages content <span style="color:#000;font-weight:bold">for</span> process ID <span style="color:#099">1</span> from checkpoint: postgres-checkpoint.tar.gz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Address           Hexadecimal                                       ASCII            
-</span></span><span style="display:flex;"><span>-------------------------------------------------------------------------------------
-</span></span><span style="display:flex;"><span>000055996b20a000  <span style="color:#099">48</span> <span style="color:#099">83</span> ec <span style="color:#099">08</span> <span style="color:#099">48</span> 8b <span style="color:#099">05</span> 3d 0f <span style="color:#099">79</span> <span style="color:#099">00</span> <span style="color:#099">48</span> <span style="color:#099">85</span> c0 <span style="color:#099">74</span> <span style="color:#099">02</span>  |H...H..<span style="color:#000;font-weight:bold">=</span>.y.H..t.|
-</span></span><span style="display:flex;"><span>000055996b20a010  ff d0 <span style="color:#099">48</span> <span style="color:#099">83</span> c4 <span style="color:#099">08</span> c3 <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span>  |..H.............|
-</span></span><span style="display:flex;"><span>000055996b20a020  ff <span style="color:#099">35</span> <span style="color:#099">52</span> fe <span style="color:#099">78</span> <span style="color:#099">00</span> ff <span style="color:#099">25</span> <span style="color:#099">54</span> fe <span style="color:#099">78</span> <span style="color:#099">00</span> 0f 1f <span style="color:#099">40</span> <span style="color:#099">00</span>  |.5R.x..%T.x...@.|
-</span></span><span style="display:flex;"><span>000055996b20a030  ff <span style="color:#099">25</span> <span style="color:#099">52</span> fe <span style="color:#099">78</span> <span style="color:#099">00</span> <span style="color:#099">68</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> e9 e0 ff ff ff  |.%R.x.h.........|
-</span></span><span style="display:flex;"><span>000055996b20a040  ff <span style="color:#099">25</span> 4a fe <span style="color:#099">78</span> <span style="color:#099">00</span> <span style="color:#099">68</span> <span style="color:#099">01</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> e9 d0 ff ff ff  |.%J.x.h.........|
-</span></span><span style="display:flex;"><span>000055996b20a050  ff <span style="color:#099">25</span> <span style="color:#099">42</span> fe <span style="color:#099">78</span> <span style="color:#099">00</span> <span style="color:#099">68</span> <span style="color:#099">02</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> e9 c0 ff ff ff  |.%B.x.h.........|
-</span></span><span style="display:flex;"><span>000055996b20a060  ff <span style="color:#099">25</span> 3a fe <span style="color:#099">78</span> <span style="color:#099">00</span> <span style="color:#099">68</span> <span style="color:#099">03</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> e9 b0 ff ff ff  |.%:.x.h.........|
-</span></span><span style="display:flex;"><span>000055996b20a070  ff <span style="color:#099">25</span> <span style="color:#099">32</span> fe <span style="color:#099">78</span> <span style="color:#099">00</span> <span style="color:#099">68</span> <span style="color:#099">04</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> e9 a0 ff ff ff  |.%2.x.h.........|
-</span></span><span style="display:flex;"><span>000055996b20a080  ff <span style="color:#099">25</span> 2a fe <span style="color:#099">78</span> <span style="color:#099">00</span> <span style="color:#099">68</span> <span style="color:#099">05</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> e9 <span style="color:#099">90</span> ff ff ff  |.%*.x.h.........|
-</span></span><span style="display:flex;"><span>000055996b20a090  ff <span style="color:#099">25</span> <span style="color:#099">22</span> fe <span style="color:#099">78</span> <span style="color:#099">00</span> <span style="color:#099">68</span> <span style="color:#099">06</span> <span style="color:#099">00</span> <span style="color:#099">00</span> <span style="color:#099">00</span> e9 <span style="color:#099">80</span> ff ff ff  |.%<span style="color:#d14">&#34;.x.h.........|
-</span></span></span><span style="display:flex;"><span><span style="color:#d14">000055996b20a0a0  ff 25 1a fe 78 00 68 07 00 00 00 e9 70 ff ff ff  |.%..x.h.....p...|
-</span></span></span><span style="display:flex;"><span><span style="color:#d14">000055996b20a0b0  ff 25 12 fe 78 00 68 08 00 00 00 e9 60 ff ff ff  |.%..x.h.....`...|
-</span></span></span><span style="display:flex;"><span><span style="color:#d14">000055996b20a0c0  ff 25 0a fe 78 00 68 09 00 00 00 e9 50 ff ff ff  |.%..x.h.....P...|
-</span></span></span><span style="display:flex;"><span><span style="color:#d14">000055996b20a0d0  ff 25 02 fe 78 00 68 0a 00 00 00 e9 40 ff ff ff  |.%..x.h.....@...|
-</span></span></span><span style="display:flex;"><span><span style="color:#d14">000055996b20a0e0  ff 25 fa fd 78 00 68 0b 00 00 00 e9 30 ff ff ff  |.%..x.h.....0...|
-</span></span></span><span style="display:flex;"><span><span style="color:#d14">000055996b20a0f0  ff 25 f2 fd 78 00 68 0c 00 00 00 e9 20 ff ff ff  |.%..x.h..... ...|
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="conclusion">Conclusion</h2>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">checkpointctl show postgres-checkpoint.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Displaying container checkpoint data from postgres-checkpoint.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> CONTAINER <span class="p">|</span>               IMAGE               <span class="p">|</span>      ID      <span class="p">|</span> RUNTIME <span class="p">|</span>          CREATED          <span class="p">|</span> ENGINE <span class="p">|</span> CHKPT SIZE <span class="p">|</span> ROOT FS DIFF SIZE <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> postgres  <span class="p">|</span> docker.io/library/postgres:latest <span class="p">|</span> e95b555d040d <span class="p">|</span> crun    <span class="p">|</span> 2024-01-28T14:37:56-05:00 <span class="p">|</span> Podman <span class="p">|</span> 27.3 MiB   <span class="p">|</span> 2.0 KiB           <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+</span></span></code></pre></div></div>
+<p>Use <code>inspect</code> subcommand to get more detailed information about the container checkpoint.</p>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">checkpointctl inspect postgres-checkpoint.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Displaying container checkpoint tree view from postgres-checkpoint.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">postgres
+</span></span><span class="line"><span class="cl">├── Image: docker.io/library/postgres:latest
+</span></span><span class="line"><span class="cl">├── ID: e95b555d040dcb2f61c3c8f62511827e58b8733456f3ec797c4a846c4bd7ac8c
+</span></span><span class="line"><span class="cl">├── Runtime: crun
+</span></span><span class="line"><span class="cl">├── Created: 2024-01-28T14:37:56-05:00
+</span></span><span class="line"><span class="cl">├── Engine: Podman
+</span></span><span class="line"><span class="cl">├── Checkpoint size: 27.3 MiB
+</span></span><span class="line"><span class="cl">│   └── Memory pages size: 27.2 MiB
+</span></span><span class="line"><span class="cl">└── Root FS diff size: 2.0 KiB</span></span></code></pre></div></div>
+<p>To see the process tree of the container, add the <code>--ps-tree</code> option:</p>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">checkpointctl inspect postgres-checkpoint.tar.gz --ps-tree
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Displaying container checkpoint tree view from postgres-checkpoint.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">postgres
+</span></span><span class="line"><span class="cl">├── Image: docker.io/library/postgres:latest
+</span></span><span class="line"><span class="cl">├── ID: e95b555d040dcb2f61c3c8f62511827e58b8733456f3ec797c4a846c4bd7ac8c
+</span></span><span class="line"><span class="cl">├── Runtime: crun
+</span></span><span class="line"><span class="cl">├── Created: 2024-01-28T14:37:56-05:00
+</span></span><span class="line"><span class="cl">├── Engine: Podman
+</span></span><span class="line"><span class="cl">├── Checkpoint size: 27.3 MiB
+</span></span><span class="line"><span class="cl">│   └── Memory pages size: 27.2 MiB
+</span></span><span class="line"><span class="cl">├── Root FS diff size: 2.0 KiB
+</span></span><span class="line"><span class="cl">└── Process tree
+</span></span><span class="line"><span class="cl">    └── <span class="o">[</span>1<span class="o">]</span>  postgres
+</span></span><span class="line"><span class="cl">        ├── <span class="o">[</span>55<span class="o">]</span>  postgres
+</span></span><span class="line"><span class="cl">        ├── <span class="o">[</span>56<span class="o">]</span>  postgres
+</span></span><span class="line"><span class="cl">        ├── <span class="o">[</span>58<span class="o">]</span>  postgres
+</span></span><span class="line"><span class="cl">        ├── <span class="o">[</span>59<span class="o">]</span>  postgres
+</span></span><span class="line"><span class="cl">        └── <span class="o">[</span>60<span class="o">]</span>  postgres</span></span></code></pre></div></div>
+<p>The <code>inspect</code> subcommand provides additional capabilities, so refer to the command-line documentation for more details:</p>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">checkpointctl inspect --help</span></span></code></pre></div></div>
+<p>Finally, you can use <code>memparse</code> subcommand to read the contents of the memory pages of the container checkpoint to get a more in-depth overview of the state of the container when it was checkpointed.</p>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">checkpointctl memparse postgres-checkpoint.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Displaying processes memory sizes from postgres-checkpoint.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">+-----+--------------+-------------+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> PID <span class="p">|</span> PROCESS NAME <span class="p">|</span> MEMORY SIZE <span class="p">|</span> SHARED MEMORY SIZE <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----+--------------+-------------+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   <span class="m">1</span> <span class="p">|</span> postgres     <span class="p">|</span> 2.3 MiB     <span class="p">|</span> 142.6 MiB          <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----+--------------+-------------+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  <span class="m">55</span> <span class="p">|</span> postgres     <span class="p">|</span> 2.3 MiB     <span class="p">|</span> 142.6 MiB          <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----+--------------+-------------+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  <span class="m">56</span> <span class="p">|</span> postgres     <span class="p">|</span> 2.3 MiB     <span class="p">|</span> 142.6 MiB          <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----+--------------+-------------+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  <span class="m">58</span> <span class="p">|</span> postgres     <span class="p">|</span> 2.3 MiB     <span class="p">|</span> 142.6 MiB          <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----+--------------+-------------+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  <span class="m">59</span> <span class="p">|</span> postgres     <span class="p">|</span> 2.6 MiB     <span class="p">|</span> 143.6 MiB          <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----+--------------+-------------+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  <span class="m">60</span> <span class="p">|</span> postgres     <span class="p">|</span> 2.5 MiB     <span class="p">|</span> 143.6 MiB          <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----+--------------+-------------+--------------------+</span></span></code></pre></div></div>
+<p>To display the contents of memory pages for a specific process (e.g., PID 1), use:</p>
+
+<div class="highlight-wrapper">
+  <div class="highlight-toolbar">
+    <span class="item">
+      <span class="label">Lang:</span>
+      <span class="name">bash</span>
+    </span>
+
+
+    <button class="item right outline brighter hide js-btn-copy-code">Copy</button>
+  </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">checkpointctl memparse postgres-checkpoint.tar.gz --pid<span class="o">=</span><span class="m">1</span> <span class="p">|</span> less
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Displaying memory pages content <span class="k">for</span> process ID <span class="m">1</span> from checkpoint: postgres-checkpoint.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Address           Hexadecimal                                       ASCII            
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">000055996b20a000  <span class="m">48</span> <span class="m">83</span> ec <span class="m">08</span> <span class="m">48</span> 8b <span class="m">05</span> 3d 0f <span class="m">79</span> <span class="m">00</span> <span class="m">48</span> <span class="m">85</span> c0 <span class="m">74</span> <span class="m">02</span>  <span class="p">|</span>H...H..<span class="o">=</span>.y.H..t.<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a010  ff d0 <span class="m">48</span> <span class="m">83</span> c4 <span class="m">08</span> c3 <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span>  <span class="p">|</span>..H.............<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a020  ff <span class="m">35</span> <span class="m">52</span> fe <span class="m">78</span> <span class="m">00</span> ff <span class="m">25</span> <span class="m">54</span> fe <span class="m">78</span> <span class="m">00</span> 0f 1f <span class="m">40</span> <span class="m">00</span>  <span class="p">|</span>.5R.x..%T.x...@.<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a030  ff <span class="m">25</span> <span class="m">52</span> fe <span class="m">78</span> <span class="m">00</span> <span class="m">68</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> e9 e0 ff ff ff  <span class="p">|</span>.%R.x.h.........<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a040  ff <span class="m">25</span> 4a fe <span class="m">78</span> <span class="m">00</span> <span class="m">68</span> <span class="m">01</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> e9 d0 ff ff ff  <span class="p">|</span>.%J.x.h.........<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a050  ff <span class="m">25</span> <span class="m">42</span> fe <span class="m">78</span> <span class="m">00</span> <span class="m">68</span> <span class="m">02</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> e9 c0 ff ff ff  <span class="p">|</span>.%B.x.h.........<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a060  ff <span class="m">25</span> 3a fe <span class="m">78</span> <span class="m">00</span> <span class="m">68</span> <span class="m">03</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> e9 b0 ff ff ff  <span class="p">|</span>.%:.x.h.........<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a070  ff <span class="m">25</span> <span class="m">32</span> fe <span class="m">78</span> <span class="m">00</span> <span class="m">68</span> <span class="m">04</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> e9 a0 ff ff ff  <span class="p">|</span>.%2.x.h.........<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a080  ff <span class="m">25</span> 2a fe <span class="m">78</span> <span class="m">00</span> <span class="m">68</span> <span class="m">05</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> e9 <span class="m">90</span> ff ff ff  <span class="p">|</span>.%*.x.h.........<span class="p">|</span>
+</span></span><span class="line"><span class="cl">000055996b20a090  ff <span class="m">25</span> <span class="m">22</span> fe <span class="m">78</span> <span class="m">00</span> <span class="m">68</span> <span class="m">06</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> e9 <span class="m">80</span> ff ff ff  <span class="p">|</span>.%<span class="s2">&#34;.x.h.........|
+</span></span></span><span class="line"><span class="cl"><span class="s2">000055996b20a0a0  ff 25 1a fe 78 00 68 07 00 00 00 e9 70 ff ff ff  |.%..x.h.....p...|
+</span></span></span><span class="line"><span class="cl"><span class="s2">000055996b20a0b0  ff 25 12 fe 78 00 68 08 00 00 00 e9 60 ff ff ff  |.%..x.h.....`...|
+</span></span></span><span class="line"><span class="cl"><span class="s2">000055996b20a0c0  ff 25 0a fe 78 00 68 09 00 00 00 e9 50 ff ff ff  |.%..x.h.....P...|
+</span></span></span><span class="line"><span class="cl"><span class="s2">000055996b20a0d0  ff 25 02 fe 78 00 68 0a 00 00 00 e9 40 ff ff ff  |.%..x.h.....@...|
+</span></span></span><span class="line"><span class="cl"><span class="s2">000055996b20a0e0  ff 25 fa fd 78 00 68 0b 00 00 00 e9 30 ff ff ff  |.%..x.h.....0...|
+</span></span></span><span class="line"><span class="cl"><span class="s2">000055996b20a0f0  ff 25 f2 fd 78 00 68 0c 00 00 00 e9 20 ff ff ff  |.%..x.h..... ...|</span></span></span></code></pre></div></div>
+
+<h2 id="conclusion">
+  Conclusion
+  <a href="#conclusion" class="hanchor" ariaLabel="Anchor"></a>
+</h2>
 <p><code>checkpointctl</code> is a powerful tool for forensic analysis of container checkpoints, allowing investigators to scrutinize and understand the state of a container at a specific point in time. Its capabilities provide insights into the container&rsquo;s configuration, processes, files, and memory, facilitating effective forensic examinations in the ever-evolving landscape of cyber threats.</p>
 
+      </div>
 
+
+    <footer class="post-footer"><div class="pagination">
+    <div class="pagination-title">
+      <span class="pagination-title-h">Read other posts</span>
+      <hr />
     </div>
-    <nav class="hide-on-mobile section-nav">
-        <nav id="TableOfContents">
-  <ol>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#prerequisite">Prerequisite</a></li>
-    <li><a href="#creating-a-container-checkpoint">Creating a container checkpoint</a></li>
-    <li><a href="#checkpoint-analysis-with-checkpointctl">Checkpoint analysis with <code>checkpointctl</code></a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
-  </ol>
-</nav>
-    </nav>
-</div>
-<div class="post">
-    <hr class="footer-separator" />
-<div class="tags">
-    
-    
-    <ul class="flat">
-        
-        
-        <li class="tag-li"><a href="/tags/criu">CRIU</a>
-        </li>
-        
-        
-        <li class="tag-li"><a href="/tags/cybersecurity">Cybersecurity</a>
-        </li>
-        
-        
-        <li class="tag-li"><a href="/tags/container">Container</a>
-        </li>
-        
-        
-        <li class="tag-li"><a href="/tags/docker">Docker</a>
-        </li>
-        
-        
-        <li class="tag-li"><a href="/tags/podman">Podman</a>
-        </li>
-        
-        
-        <li class="tag-li"><a href="/tags/checkpoint/restore">Checkpoint/Restore</a>
-        </li>
-        
-        
-        <li class="tag-li"><a href="/tags/golang">Golang</a>
-        </li>
-        
-        
-        <li class="tag-li"><a href="/tags/linux">Linux</a>
-        </li>
-        
+    <div class="buttons fill">
+        <a href="http://localhost:1313/2022/08/discovering-kernel-fuzzing/" class="button">
+          <span class="icon">&lArr;</span>
+          <span class="label">Discovering Kernel Fuzzing</span>
+        </a>
+    </div>
+  </div>
+
+    </footer>
+  </article>
+        </main>
+        <footer class="site-footer">
+<p class="buildinfo">
+  <time datetime="2025-09-17 15:12:23 CDT">Site built on: 2025-09-17 15:12:23 CDT</time>
+</p>
+<div class="copyright">
+  <p><span>&nbsp;</span><a href="https://github.com/behouba">behouba</a></p>
+  <nav class="navbar">
+    <ul class="navbar__list">
+      <li><a href="http://localhost:1313/posts/index.xml">RSS</a></li>
+      <li><a href="http://localhost:1313/sitemap.xml">Sitemap</a></li>
     </ul>
-    
-    
+  </nav>
 </div>
-
-
-
-<div class="back">
-    <a href="https://behouba.github.io/"><span aria-hidden="true">← Back</span></a>
-</div>
-
-
-<div class="back">
-    
-</div>
-
-</div>
-
-	</div>
-	
-
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2025  © Behouba Manassé Kouamé </div>
-		
-	</nav>
-</div><script>feather.replace()</script>
-	
-	<script>
-    var enableTruncate =  true 
-    var filterDepth = false;
-    const MAX_DEPTH = 9; 
-
-    
-    window.addEventListener('DOMContentLoaded', () => {
-        const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
-            entries.reverse().forEach(entry => {
-                const id = entry.target.getAttribute('id');
-                if (entry.intersectionRatio > 0) {
-                    var selected = document.querySelectorAll(`nav li a[href="#${id}"]`)
-                    if (selected != null) {
-                        selected.forEach(s => {
-                            if (s != null) {
-                                var depth = getDepth(s.parentElement);
-                                if (filterDepth && depth <= MAX_DEPTH) {
-                                    clearActiveStatesInTableOfContents();
-                                    s.parentElement.classList.add('active')
-                                }
-                            } else if (!filterDepth) {
-                                clearActiveStatesInTableOfContents();
-                                s.parentElement.classList.add('active');
-                            }
-                        }
-                        )
-                    }
-
-                }
-            });
-        });
-        document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
-            observerForTableOfContentActiveState.observe(section);
-        });
-
-    });
-
-    
-    function isVisible(elem) {
-        if (!(elem instanceof Element)) return false; 
-        const style = getComputedStyle(elem);
-        if (style.display === 'none') return false;
-        if (style.visibility !== 'visible') return false;
-        if (style.opacity < 0.1) return false;
-        if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
-            elem.getBoundingClientRect().width === 0) {
-            return false;
-        }
-        const elemCenter = {
-            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
-            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
-        };
-        if (elemCenter.x < 0) return false;
-        if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
-        if (elemCenter.y < 0) return false;
-        if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
-        let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
-        do {
-            if (pointContainer === elem) return true;
-        } while (pointContainer = pointContainer.parentNode);
-        return false;
-    }
-
-
-    function clearActiveStatesInTableOfContents() {
-        document.querySelectorAll('nav li').forEach((section) => {
-            section.classList.remove('active');
-        });
-    }
-
-    function getDepth(parentElement) {
-        var depth = 0;
-        while (parentElement !== null && parentElement.tagName.toLowerCase() !== 'ul') {
-            depth++;
-            parentElement = parentElement.parentElement;
-        }
-        return depth;
-    }
-
-    function navItems() {
-        
-        var nestedListItems = document.querySelectorAll('nav nav li a');
-        return Array.from(nestedListItems).filter(listItem =>
-            listItem.href != null && listItem.hash.startsWith("#")
-        )
-    }
-
-    function lasItemInNavBarVisible() {
-        var lastItem = navItems().slice(-1)[0]
-        return isVisible(lastItem)
-    }
-
-
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        if (!enableTruncate) return;
-        var navBar = navItems()
-        console.log(navBar)
-        if (!lasItemInNavBarVisible()) {
-            filterDepth = true;
-            
-            navBar.forEach(function (listItem) {
-                var depth = getDepth(listItem.parentElement);
-
-                if (depth > MAX_DEPTH) {
-                    listItem.parentElement.classList.add('depth-nested');
-                }
-            });
-        }
-
-    });
-
-</script>
-
-	
+<p class="themeinfo">Powered by <a href="https://gohugo.io">Hugo</a>, using theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.</p>
+</footer>
+      </div>
+    </div><script type="text/javascript" src="http://localhost:1313/bundle.js"></script>
 </body>
-
 </html>

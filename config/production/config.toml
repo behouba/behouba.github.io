@@ -1,0 +1,7 @@
+googleAnalytics = "G-Y9LNJ1NC1E"
+enableGitInfo = true
+
+[params.git_info]
+  host = "github"
+  user = "behouba"
+  repo = "behouba.github.io"

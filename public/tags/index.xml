@@ -2,89 +2,109 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Behouba Manassé K</title>
-    <link>https://behouba.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Behouba Manassé K</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>© Behouba Manassé Kouamé</copyright>
-    <lastBuildDate>Tue, 03 Oct 2023 11:25:52 +0300</lastBuildDate>
-    <atom:link href="https://behouba.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+      <language>en-us</language>
+      <lastBuildDate>Tue, 03 Oct 2023 11:25:52 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Checkpoint/Restore</title>
+      <link>http://localhost:1313/tags/checkpoint/restore/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/checkpoint/restore/</guid>
+      <description></description>
+      <content></content>
+    </item>
     <item>
       <title>Container</title>
-      <link>https://behouba.github.io/tags/container/</link>
+      <link>http://localhost:1313/tags/container/</link>
       <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/container/</guid>
+
+      <guid>http://localhost:1313/tags/container/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>CRIU</title>
-      <link>https://behouba.github.io/tags/criu/</link>
+      <link>http://localhost:1313/tags/criu/</link>
       <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/criu/</guid>
+
+      <guid>http://localhost:1313/tags/criu/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>Cybersecurity</title>
-      <link>https://behouba.github.io/tags/cybersecurity/</link>
+      <link>http://localhost:1313/tags/cybersecurity/</link>
       <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/cybersecurity/</guid>
+
+      <guid>http://localhost:1313/tags/cybersecurity/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://behouba.github.io/tags/docker/</link>
+      <link>http://localhost:1313/tags/docker/</link>
       <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/docker/</guid>
+
+      <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>Golang</title>
-      <link>https://behouba.github.io/tags/golang/</link>
+      <link>http://localhost:1313/tags/golang/</link>
       <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/golang/</guid>
+
+      <guid>http://localhost:1313/tags/golang/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://behouba.github.io/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/linux/</guid>
+
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>Podman</title>
-      <link>https://behouba.github.io/tags/podman/</link>
+      <link>http://localhost:1313/tags/podman/</link>
       <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/podman/</guid>
+
+      <guid>http://localhost:1313/tags/podman/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>Fuzzing</title>
-      <link>https://behouba.github.io/tags/fuzzing/</link>
+      <link>http://localhost:1313/tags/fuzzing/</link>
       <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/fuzzing/</guid>
+
+      <guid>http://localhost:1313/tags/fuzzing/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>OS</title>
-      <link>https://behouba.github.io/tags/os/</link>
+      <link>http://localhost:1313/tags/os/</link>
       <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
-      <guid>https://behouba.github.io/tags/os/</guid>
+
+      <guid>http://localhost:1313/tags/os/</guid>
       <description></description>
+      <content></content>
     </item>
     <item>
       <title>Fedora</title>
-      <link>https://behouba.github.io/tags/fedora/</link>
+      <link>http://localhost:1313/tags/fedora/</link>
       <pubDate>Sat, 14 Mar 2020 18:45:52 +0100</pubDate>
-      <guid>https://behouba.github.io/tags/fedora/</guid>
+
+      <guid>http://localhost:1313/tags/fedora/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>Checkpoint/Restore</title>
-      <link>https://behouba.github.io/tags/checkpoint/restore/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://behouba.github.io/tags/checkpoint/restore/</guid>
-      <description></description>
+      <content></content>
     </item>
   </channel>
 </rss>
