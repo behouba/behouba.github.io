@@ -1,320 +1,418 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Behouba Manasse</title>
-    <link>https://examplesite.com/</link>
-    <description>Recent posts from on Behouba Manasse</description>
+    <title>Behouba Manassé Kouamé on Behouba Manassé K</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Behouba Manassé Kouamé on Behouba Manassé K</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://examplesite.com/index.xml" rel="self" type="application/rss+xml" />
+      <language>en-us</language>
+      <lastBuildDate>Sat, 19 Apr 2025 21:37:58 +0530</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Rich Content</title>
-      <link>https://examplesite.com/post/rich-content/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/post/rich-content/</guid>
-      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;youtube-privacy-enhanced-shortcode&#34;&gt;YouTube Privacy Enhanced Shortcode&lt;/h2&gt;
+      <title>Talks and Presentations</title>
+      <link>http://localhost:1313/presentations/</link>
+      <pubDate>Sat, 19 Apr 2025 21:37:58 +0530</pubDate>
 
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/ZJthWmvUzzc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;!-- raw HTML omitted --&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;twitter-simple-shortcode&#34;&gt;Twitter Simple Shortcode&lt;/h2&gt;
-
-
-
-
-&lt;style type=&#34;text/css&#34;&gt;
-  .twitter-tweet {
-  font: 14px/1.45 -apple-system,BlinkMacSystemFont,&#34;Segoe UI&#34;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&#34;Helvetica Neue&#34;,sans-serif;
-  border-left: 4px solid #2b7bb9;
-  padding-left: 1.5em;
-  color: #555;
-}
-  .twitter-tweet a {
-  color: #2b7bb9;
-  text-decoration: none;
-}
-  blockquote.twitter-tweet a:hover,
-  blockquote.twitter-tweet a:focus {
-  text-decoration: underline;
-}
-&lt;/style&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”&lt;br&gt;— Jan Tschichold &lt;a href=&#34;https://t.co/gcv7SrhvJb&#34;&gt;pic.twitter.com/gcv7SrhvJb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Graphic Design History (@DesignReviewed) &lt;a href=&#34;https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw&#34;&gt;January 17, 2019&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;!-- raw HTML omitted --&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;vimeo-simple-shortcode&#34;&gt;Vimeo Simple Shortcode&lt;/h2&gt;
-
-
-
-
-
-&lt;style&gt;
-.__h_video {
-   position: relative;
-   padding-bottom: 56.23%;
-   height: 0;
-   overflow: hidden;
-   width: 100%;
-   background: #000;
-}
-.__h_video img {
-   width: 100%;
-   height: auto;
-   color: #000;
-}
-.__h_video .play {
-   height: 72px;
-   width: 72px;
-   left: 50%;
-   top: 50%;
-   margin-left: -36px;
-   margin-top: -36px;
-   position: absolute;
-   cursor: pointer;
-}
-&lt;/style&gt;
-
-
-&lt;div class=&#34;s_video_simple __h_video&#34;&gt;
-&lt;a href=&#34;https://vimeo.com/4.8912912e&amp;#43;07&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;
-
-
-&lt;img src=&#34;https://i.vimeocdn.com/video/337401969_640&#34; srcset=&#34;https://i.vimeocdn.com/video/337401969_640 1x, https://i.vimeocdn.com/video/337401969_640 2x&#34; alt=&#34;Sing Jan Swing - Kinetic Type&#34;&gt;
-&lt;div class=&#34;play&#34;&gt;&lt;svg version=&#34;1&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 61 61&#34;&gt;&lt;circle cx=&#34;30.5&#34; cy=&#34;30.5&#34; r=&#34;30.5&#34; opacity=&#34;.8&#34; fill=&#34;#000&#34;&gt;&lt;/circle&gt;&lt;path d=&#34;M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z&#34; fill=&#34;#fff&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Placeholder Text</title>
-      <link>https://examplesite.com/post/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/post/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
-&lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
-&lt;li&gt;Duce pollice&lt;/li&gt;
-&lt;li&gt;Eris modo&lt;/li&gt;
-&lt;li&gt;Spargitque ferrea quos palude&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Comas hunc haec pietate fetum procerum dixit&lt;/li&gt;
-&lt;li&gt;Post torum vates letum Tiresia&lt;/li&gt;
-&lt;li&gt;Flumen querellas&lt;/li&gt;
-&lt;li&gt;Arcanaque montibus omnes&lt;/li&gt;
-&lt;li&gt;Quidem et&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;vagus-elidunt&#34;&gt;Vagus elidunt&lt;/h1&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon&#34;&gt;The Van de Graaf Canon&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;mane-refeci-capiebant-unda-mulcebat&#34;&gt;Mane refeci capiebant unda mulcebat&lt;/h2&gt;
-&lt;p&gt;Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong&gt;Faces illo pepulere&lt;/strong&gt; tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p&gt;
-&lt;p&gt;Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.&lt;/p&gt;
-&lt;p&gt;Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong&gt;mitis temploque&lt;/strong&gt; vocatus, inque alis, &lt;em&gt;oculos nomen&lt;/em&gt; non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Math Typesetting</title>
-      <link>https://examplesite.com/post/math-typesetting/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/post/math-typesetting/</guid>
-      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
-&lt;p&gt;In this example we will be using &lt;a href=&#34;https://katex.org/&#34;&gt;KaTeX&lt;/a&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/presentations/</guid>
+      <description>&lt;h2 id=&#34;gsoc-2025-final-presentationhttpsdocsgooglecompresentationde2pacx-1vtnv6nobjjlgwh9wr555wjvc8k1jyhtcj9gehsfxlrue91yrxesphw2gtykzsuj1l907z_cic6pqhiopubstartfalseloopfalsedelayms3000slideidg37d0ce618b0_0_0&#34;&gt;
+  &lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTNV6nObjjlGwH9wR555WJVC8k1jYhTCJ9GeHsFXlRUe91YRXESPHw2GtYKzsUJ1l907z_cic6PQHio/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000#slide=id.g37d0ce618b0_0_0&#34;&gt;GSoC 2025 final presentation&lt;/a&gt;
+  &lt;a href=&#34;#gsoc-2025-final-presentationhttpsdocsgooglecompresentationde2pacx-1vtnv6nobjjlgwh9wr555wjvc8k1jyhtcj9gehsfxlrue91yrxesphw2gtykzsuj1l907z_cic6pqhiopubstartfalseloopfalsedelayms3000slideidg37d0ce618b0_0_0&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Create a partial under &lt;code&gt;/layouts/partials/math.html&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Within this partial reference the &lt;a href=&#34;https://katex.org/docs/autorender.html&#34;&gt;Auto-render Extension&lt;/a&gt; or host these scripts locally.&lt;/li&gt;
-&lt;li&gt;Include the partial in your templates like so:&lt;/li&gt;
+&lt;li&gt;Date: September 17, 2025&lt;/li&gt;
+&lt;li&gt;Event: Google Summer of Code 2025 final presentation&lt;/li&gt;
+&lt;li&gt;Description: Final presentation of my work on criu-coordinator during GSoC 2025.&lt;/li&gt;
+&lt;li&gt;Youtube: &lt;a href=&#34;https://www.youtube.com/watch?v=fzXDqbq2X3s&amp;amp;ab_channel=RadostinStoyanov&#34;&gt;Watch here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <content>
+&lt;h2 id=&#34;gsoc-2025-final-presentationhttpsdocsgooglecompresentationde2pacx-1vtnv6nobjjlgwh9wr555wjvc8k1jyhtcj9gehsfxlrue91yrxesphw2gtykzsuj1l907z_cic6pqhiopubstartfalseloopfalsedelayms3000slideidg37d0ce618b0_0_0&#34;&gt;
+  &lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTNV6nObjjlGwH9wR555WJVC8k1jYhTCJ9GeHsFXlRUe91YRXESPHw2GtYKzsUJ1l907z_cic6PQHio/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000#slide=id.g37d0ce618b0_0_0&#34;&gt;GSoC 2025 final presentation&lt;/a&gt;
+  &lt;a href=&#34;#gsoc-2025-final-presentationhttpsdocsgooglecompresentationde2pacx-1vtnv6nobjjlgwh9wr555wjvc8k1jyhtcj9gehsfxlrue91yrxesphw2gtykzsuj1l907z_cic6pqhiopubstartfalseloopfalsedelayms3000slideidg37d0ce618b0_0_0&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Date: September 17, 2025&lt;/li&gt;
+&lt;li&gt;Event: Google Summer of Code 2025 final presentation&lt;/li&gt;
+&lt;li&gt;Description: Final presentation of my work on criu-coordinator during GSoC 2025.&lt;/li&gt;
+&lt;li&gt;Youtube: &lt;a href=&#34;https://www.youtube.com/watch?v=fzXDqbq2X3s&amp;amp;ab_channel=RadostinStoyanov&#34;&gt;Watch here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; or .Params.math .Site.Params.math &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; partial &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;math.html&amp;#34;&lt;/span&gt; . &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; end &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;To enable KaTex globally set the parameter &lt;code&gt;math&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in a project&amp;rsquo;s configuration&lt;/li&gt;
-&lt;li&gt;To enable KaTex on a per page basis include the parameter &lt;code&gt;math: true&lt;/code&gt; in content files&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Use the online reference of &lt;a href=&#34;https://katex.org/docs/supported.html&#34;&gt;Supported TeX Functions&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
-
-&lt;p&gt;Block math:
-$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$&lt;/p&gt;</description>
+</content>
     </item>
-    
     <item>
-      <title>Emoji Support</title>
-      <link>https://examplesite.com/post/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/post/emoji-support/</guid>
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://gohugo.io/functions/emojify/&#34;&gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;&gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To enable emoji globally, set &lt;code&gt;enableEmoji&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site&amp;rsquo;s &lt;a href=&#34;https://gohugo.io/getting-started/configuration/&#34;&gt;configuration&lt;/a&gt; and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;The &lt;a href=&#34;http://www.emoji-cheat-sheet.com/&#34;&gt;Emoji cheat sheet&lt;/a&gt; is a useful reference for emoji shorthand codes.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;.emoji {
-  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://examplesite.com/post/markdown-syntax/</link>
-      <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/post/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
-&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
-&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
-&lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
-&lt;h2 id=&#34;h2&#34;&gt;H2&lt;/h2&gt;
-&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;
-&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;
-&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;
-&lt;h6 id=&#34;h6&#34;&gt;H6&lt;/h6&gt;
-&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;
-&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;
-&lt;p&gt;Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;/p&gt;
-&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;
-&lt;p&gt;The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code&gt;footer&lt;/code&gt; or &lt;code&gt;cite&lt;/code&gt; element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p&gt;
-&lt;h4 id=&#34;blockquote-without-attribution&#34;&gt;Blockquote without attribution&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Tiam, ad mint andaepu dandae nostion secatur sequo quae.
-&lt;strong&gt;Note&lt;/strong&gt; that you can use &lt;em&gt;Markdown syntax&lt;/em&gt; within a blockquote.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;blockquote-with-attribution&#34;&gt;Blockquote with attribution&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;!-- raw HTML omitted --&gt;
-— &lt;!-- raw HTML omitted --&gt;Rob Pike&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
-&lt;p&gt;Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Age&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Bob&lt;/td&gt;
-&lt;td&gt;27&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Alice&lt;/td&gt;
-&lt;td&gt;23&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id=&#34;inline-markdown-within-tables&#34;&gt;Inline Markdown within tables&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Italics&lt;/th&gt;
-&lt;th&gt;Bold&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;italics&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;code&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
-&lt;h4 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Example HTML5 Document&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;Test&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;code-block-indented-with-four-spaces&#34;&gt;Code block indented with four spaces&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-  &amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;code-block-with-hugos-internal-highlight-shortcode&#34;&gt;Code block with Hugo&amp;rsquo;s internal highlight shortcode&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Example HTML5 Document&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;Test&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;list-types&#34;&gt;List Types&lt;/h2&gt;
-&lt;h4 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;First item&lt;/li&gt;
-&lt;li&gt;Second item&lt;/li&gt;
-&lt;li&gt;Third item&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h4&gt;
+      <title>Memory Forensics analysis of container checkpoints with checkpointctl</title>
+      <link>http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;
+  Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems. In recent years, containerized applications have become popular. Containers are not immune to cyberattacks, and when there are suspicious malicious activities, it may be useful to be able to investigate our container without disturbing the operation of that container. This is when &lt;code&gt;checkpoinctl&lt;/code&gt; came in handy. &lt;code&gt;checkpointcl&lt;/code&gt; is CLI project from the open-source organization CRIU (Checkpoint Restore In Userspace) that makes it easy to inspect container checkpoints created by CRIU. In this article, we will see how &lt;code&gt;checkpointcl&lt;/code&gt; can be used as a forensic analysis tool for container checkpoints.&lt;/p&gt;</description>
+      <content>
+&lt;h2 id=&#34;introduction&#34;&gt;
+  Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems. In recent years, containerized applications have become popular. Containers are not immune to cyberattacks, and when there are suspicious malicious activities, it may be useful to be able to investigate our container without disturbing the operation of that container. This is when &lt;code&gt;checkpoinctl&lt;/code&gt; came in handy. &lt;code&gt;checkpointcl&lt;/code&gt; is CLI project from the open-source organization CRIU (Checkpoint Restore In Userspace) that makes it easy to inspect container checkpoints created by CRIU. In this article, we will see how &lt;code&gt;checkpointcl&lt;/code&gt; can be used as a forensic analysis tool for container checkpoints.&lt;/p&gt;
+
+&lt;h2 id=&#34;prerequisite&#34;&gt;
+  Prerequisite
+  &lt;a href=&#34;#prerequisite&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;List item&lt;/li&gt;
-&lt;li&gt;Another item&lt;/li&gt;
-&lt;li&gt;And another item&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;nested-list&#34;&gt;Nested list&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Fruit
-&lt;ul&gt;
-&lt;li&gt;Apple&lt;/li&gt;
-&lt;li&gt;Orange&lt;/li&gt;
-&lt;li&gt;Banana&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;A Linux operating system&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;Dairy
-&lt;ul&gt;
-&lt;li&gt;Milk&lt;/li&gt;
-&lt;li&gt;Cheese&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;Podman (&lt;a href=&#34;https://podman.io/docs/installation&#34;&gt;Podman Installation Instructions&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://criu.org/Installation&#34;&gt;CRIU&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/checkpoint-restore/checkpointctl&#34;&gt;checkpointcl&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;other-elements--abbr-sub-sup-kbd-mark&#34;&gt;Other Elements — abbr, sub, sup, kbd, mark&lt;/h2&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;GIF&lt;!-- raw HTML omitted --&gt; is a bitmap image format.&lt;/p&gt;
-&lt;p&gt;H&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;O&lt;/p&gt;
-&lt;p&gt;X&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt; + Y&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt; = Z&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;Press &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;CTRL&lt;!-- raw HTML omitted --&gt;+&lt;!-- raw HTML omitted --&gt;ALT&lt;!-- raw HTML omitted --&gt;+&lt;!-- raw HTML omitted --&gt;Delete&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; to end the session.&lt;/p&gt;
-&lt;p&gt;Most &lt;!-- raw HTML omitted --&gt;salamanders&lt;!-- raw HTML omitted --&gt; are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/watch?v=PAAkCSZUG1c&#34;&gt;talk&lt;/a&gt; during Gopherfest, November 18, 2015. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;</description>
+
+&lt;h2 id=&#34;creating-a-container-checkpoint&#34;&gt;
+  Creating a container checkpoint
+  &lt;a href=&#34;#creating-a-container-checkpoint&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;We start by starting a Postgres container with Podman:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;podman run --name postgres -d -e &lt;span class=&#34;nv&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;secret_password postgres&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Because checkpoints currently work with root containers only, it is necessary to run the Postgres container as root. I have switched to root for all the examples in this tutorial. Alternatively, you can prefix your commands with &lt;code&gt;sudo&lt;/code&gt; to achieve the same effect.&lt;/p&gt;
+&lt;p&gt;Create a checkpoint for the container:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir checkpoints
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; checkpoints
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;podman container checkpoint postgres --leave-running --export postgres-checkpoint.tar.gz&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls postgres-checkpoint.tar.gz&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Install &lt;code&gt;checkpointctl&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go install github.com/checkpoint-restore/checkpointctl@main&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Verify the installation:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl --help&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;checkpoint-analysis-with-checkpointctl&#34;&gt;
+  Checkpoint analysis with &lt;code&gt;checkpointctl&lt;/code&gt;
+  &lt;a href=&#34;#checkpoint-analysis-with-checkpointctl&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;show&lt;/code&gt; subcommand to get an overview of the checkpoint.&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl show postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying container checkpoint data from postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; CONTAINER &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;               IMAGE               &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      ID      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; RUNTIME &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          CREATED          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ENGINE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; CHKPT SIZE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ROOT FS DIFF SIZE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; docker.io/library/postgres:latest &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; e95b555d040d &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; crun    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2024-01-28T14:37:56-05:00 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Podman &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 27.3 MiB   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.0 KiB           &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Use &lt;code&gt;inspect&lt;/code&gt; subcommand to get more detailed information about the container checkpoint.&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl inspect postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying container checkpoint tree view from postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Image: docker.io/library/postgres:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── ID: e95b555d040dcb2f61c3c8f62511827e58b8733456f3ec797c4a846c4bd7ac8c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Runtime: crun
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Created: 2024-01-28T14:37:56-05:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Engine: Podman
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Checkpoint size: 27.3 MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── Memory pages size: 27.2 MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── Root FS diff size: 2.0 KiB&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;To see the process tree of the container, add the &lt;code&gt;--ps-tree&lt;/code&gt; option:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl inspect postgres-checkpoint.tar.gz --ps-tree
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying container checkpoint tree view from postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Image: docker.io/library/postgres:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── ID: e95b555d040dcb2f61c3c8f62511827e58b8733456f3ec797c4a846c4bd7ac8c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Runtime: crun
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Created: 2024-01-28T14:37:56-05:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Engine: Podman
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Checkpoint size: 27.3 MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── Memory pages size: 27.2 MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Root FS diff size: 2.0 KiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── Process tree
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;55&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;56&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;58&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;59&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        └── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;60&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;inspect&lt;/code&gt; subcommand provides additional capabilities, so refer to the command-line documentation for more details:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl inspect --help&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Finally, you can use &lt;code&gt;memparse&lt;/code&gt; subcommand to read the contents of the memory pages of the container checkpoint to get a more in-depth overview of the state of the container when it was checkpointed.&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl memparse postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying processes memory sizes from postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; PID &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; PROCESS NAME &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; MEMORY SIZE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; SHARED MEMORY SIZE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.3 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 142.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;55&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.3 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 142.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;56&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.3 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 142.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;58&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.3 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 142.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;59&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.6 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 143.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.5 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 143.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;To display the contents of memory pages for a specific process (e.g., PID 1), use:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl memparse postgres-checkpoint.tar.gz --pid&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying memory pages content &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; process ID &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; from checkpoint: postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Address           Hexadecimal                                       ASCII            
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-------------------------------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a000  &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; ec &lt;span class=&#34;m&#34;&gt;08&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; 8b &lt;span class=&#34;m&#34;&gt;05&lt;/span&gt; 3d 0f &lt;span class=&#34;m&#34;&gt;79&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;85&lt;/span&gt; c0 &lt;span class=&#34;m&#34;&gt;74&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;H...H..&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.y.H..t.&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a010  ff d0 &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; c4 &lt;span class=&#34;m&#34;&gt;08&lt;/span&gt; c3 &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;..H.............&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a020  ff &lt;span class=&#34;m&#34;&gt;35&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;54&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; 0f 1f &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.5R.x..%T.x...@.&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a030  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 e0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%R.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a040  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 4a fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;01&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 d0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%J.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a050  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;42&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;02&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 c0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%B.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a060  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 3a fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;03&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 b0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%:.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a070  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 a0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%2.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a080  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 2a fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;05&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 &lt;span class=&#34;m&#34;&gt;90&lt;/span&gt; ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%*.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a090  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;06&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%&lt;span class=&#34;s2&#34;&gt;&amp;#34;.x.h.........|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0a0  ff 25 1a fe 78 00 68 07 00 00 00 e9 70 ff ff ff  |.%..x.h.....p...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0b0  ff 25 12 fe 78 00 68 08 00 00 00 e9 60 ff ff ff  |.%..x.h.....`...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0c0  ff 25 0a fe 78 00 68 09 00 00 00 e9 50 ff ff ff  |.%..x.h.....P...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0d0  ff 25 02 fe 78 00 68 0a 00 00 00 e9 40 ff ff ff  |.%..x.h.....@...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0e0  ff 25 fa fd 78 00 68 0b 00 00 00 e9 30 ff ff ff  |.%..x.h.....0...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0f0  ff 25 f2 fd 78 00 68 0c 00 00 00 e9 20 ff ff ff  |.%..x.h..... ...|&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;
+  Conclusion
+  &lt;a href=&#34;#conclusion&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;checkpointctl&lt;/code&gt; is a powerful tool for forensic analysis of container checkpoints, allowing investigators to scrutinize and understand the state of a container at a specific point in time. Its capabilities provide insights into the container&amp;rsquo;s configuration, processes, files, and memory, facilitating effective forensic examinations in the ever-evolving landscape of cyber threats.&lt;/p&gt;
+</content>
     </item>
-    
+    <item>
+      <title>Discovering Kernel Fuzzing</title>
+      <link>http://localhost:1313/2022/08/discovering-kernel-fuzzing/</link>
+      <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/2022/08/discovering-kernel-fuzzing/</guid>
+      <description>&lt;p&gt;This year, during an industrial project that is part of my master&amp;rsquo;s program, I had the opportunity to make my first steps into the world of kernel fuzzing. This was a great learning experience, during which I had the opportunity to work with wonderful people. In this blog post, I will describe my journey into the world of kernel fuzzing.&lt;/p&gt;
+&lt;p&gt;I have to admit that I didn&amp;rsquo;t know anything about fuzzing when I was finishing my first semester of the Master of Software Engineering at &lt;a href=&#34;https://innopolis.university/en/&#34;&gt;Innopolis University&lt;/a&gt;. Before the end of the first semester, we have to choose an industrial project for the next semester. To do so, we attended multiple project presentation sessions with representatives of different companies. During the project presentations, we were presented with many interesting projects covering various areas of software engineering. One project from KasperskyLab was the most appealing to me; I don&amp;rsquo;t know exactly why, since I didn&amp;rsquo;t know anything about the project before the presentation. But I think it was because I wanted to learn something outside of my comfort zone. The project was presented by Anna Melekhova, a senior engineer at KasperskyLab. The project was about researching kernel fuzzing approaches and their implementation for Kaspersky OS, a new operating system in development at KasperskyLab. I chose this project and got it accepted along with four other classmates.&lt;/p&gt;</description>
+      <content>&lt;p&gt;This year, during an industrial project that is part of my master&amp;rsquo;s program, I had the opportunity to make my first steps into the world of kernel fuzzing. This was a great learning experience, during which I had the opportunity to work with wonderful people. In this blog post, I will describe my journey into the world of kernel fuzzing.&lt;/p&gt;
+&lt;p&gt;I have to admit that I didn&amp;rsquo;t know anything about fuzzing when I was finishing my first semester of the Master of Software Engineering at &lt;a href=&#34;https://innopolis.university/en/&#34;&gt;Innopolis University&lt;/a&gt;. Before the end of the first semester, we have to choose an industrial project for the next semester. To do so, we attended multiple project presentation sessions with representatives of different companies. During the project presentations, we were presented with many interesting projects covering various areas of software engineering. One project from KasperskyLab was the most appealing to me; I don&amp;rsquo;t know exactly why, since I didn&amp;rsquo;t know anything about the project before the presentation. But I think it was because I wanted to learn something outside of my comfort zone. The project was presented by Anna Melekhova, a senior engineer at KasperskyLab. The project was about researching kernel fuzzing approaches and their implementation for Kaspersky OS, a new operating system in development at KasperskyLab. I chose this project and got it accepted along with four other classmates.&lt;/p&gt;
+&lt;p&gt;According to &lt;a href=&#34;https://en.wikipedia.org/wiki/Fuzzing&#34;&gt;Wikipedia&lt;/a&gt; &amp;ldquo;fuzzing or fuzz testing is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program.&amp;rdquo; So, the way I see it, fuzzing is like tricking a software system. You feed it lots of silly, crazy, and random things to see if it can handle them. The goal of this testing approach is to proactively reveal flaws in the software that might be difficult to find with traditional testing approaches.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Kernel_(operating_system)&#34;&gt;kernel,&lt;/a&gt; on the other hand, is the core component of a computer&amp;rsquo;s operating system. Depending on design choices and architecture, the kernel has more or less complete control over everything in the system.&lt;/p&gt;
+&lt;p&gt;The first week was dedicated to initial research in order to learn as much as possible about fuzzing in general. I went to many websites, read several articles about fuzzing, and finally, I found a good book on the topic, &amp;ldquo;Fuzzing for Software Security Testing and Quality Assurance, Second Edition&amp;rdquo; written by: Ari Takanen, Jared D. Demott, and Charles Miller. Although I didn&amp;rsquo;t read the book cover to cover, I got very good information from It and was confident enough to move on. I recommend reading this book if you want to learn about fuzzing.&lt;/p&gt;
+&lt;p&gt;After I got familiar with the topic of fuzz testing, I started learning about the target system, KasperskyOS. KasperskyOS is a microkernel operating system developed by the company KasperskyLab. KasperskyOS is designed with cyber immunity features in mind. While the source code of this operating system is proprietary and closed source, a publicly available version of our OS is freely available &lt;a href=&#34;https://support.kaspersky.com/help/KCE/1.1/en-US/whats_new.htm&#34;&gt;here&lt;/a&gt;. The community edition is the best way for developers to learn about the OS and develop applications for it.&lt;/p&gt;
+&lt;p&gt;At this point, we have to start researching fuzzing solutions for KasperskyOS. We performed our research by reading several research papers on the topic of kernel fuzzing. At the end of the research, the team agreed that we should work on extending a state-of-the-art kernel fuzzer called Syzkaller. Syzkaller is a popular kernel fuzzing tool developed and maintained by Google. Syzkaller is an unsupervised coverage-guided kernel fuzzer, meaning that it uses coverage data to guide a fully automated fuzzing process.&lt;/p&gt;
+&lt;p&gt;By following the documentation on the GitHub repository of syzkaller, I set up my local fuzzing environment to fuzz the Linux kernel to see how syzkaller works. Syzkaller has a modular design, its main component is called syz-manager and it is a program written in Golang and running on the host system. syz-manager spins off multiple virtual machines. The actual fuzzing happens inside each virtual machine. Inside a virtual machine is the target operating system, alongside other components such as syzkaller, syz-fuzzer , and syz-executor. syz-fuzzer guides the fuzzing process (input generation, mutation, minimization, etc.) and sends inputs that trigger new coverage back to the syz-manager process. The picture below, taken from syzkaller &lt;a href=&#34;https://github.com/google/syzkaller/blob/master/docs/internals.md&#34;&gt;documentation&lt;/a&gt; gives a visual presentation of how the syzkaller fuzzing process works.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/google/syzkaller/master/docs/process_structure.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After our experimentations with syzkaller, we find out that, in order to be able to use syzkaller to fuzz KasperskyOS we have to develop a custom implementation of syz-executor and syz-fuzzer that will run in the user-space inside a virtual machine running KasperskyOS. Then, we faced one issue, syz-fuzzer is written in Golang, and the KasperskyOS platform is not supported by Golang. So we couldn&amp;rsquo;t compile syz-fuzzer for KasperskyOS. We looked at other operating systems to see if they were similar case and how this issue was addressed. It turned out that FuchsiaOS from Google has many things in common with KasperskyOS. The FuchsiaOS platform is also not supported by Golang, so Syzkaller has a mode called &amp;ldquo;host fuzzer&amp;rdquo; making it possible to run syz-fuzzer on the host system. So we tried to do something similar for KasperskyOS, to be stuck again by another limitation. This limitation was related to the fact that KasperskyOS didn&amp;rsquo;t have an ssh server at that time. The fuzzing process of Syzkaller involves establishing an ssh connection between syz-manager/syz-fuzzer and the target system in order to execute syz-executor remotely.&lt;/p&gt;
+&lt;p&gt;At this point, it became clear that there was nothing more we could do and that we couldn&amp;rsquo;t use SyzKaller to fuzz KasperskyOS until KasperskyLab added an SSH server to their OS. To go further in this learning journey, and after discussing with the representative of the company, we decided to fall back on FuchsiaOS to complete the course project. As stated above, FuchsiaOS is in many aspects similar to KasperskyOS, and Syzkaller support for FuchsiaOS was broken, and we wanted to try to fix it. Luckily enough, it wasn&amp;rsquo;t very hard, and I was able to fix this in a few days with the help of Syzkaller maintainer &lt;a href=&#34;https://github.com/dvyukov&#34;&gt;Dmitry Vyukov&lt;/a&gt;. Here is my &lt;a href=&#34;https://github.com/google/syzkaller/pull/3205&#34;&gt;pull request&lt;/a&gt; that fixed the support for FuchsiaOS.&lt;/p&gt;
+&lt;p&gt;Overall, this was a great experience for me personally to learn about kernel fuzzing with Syzkaller. I cannot conclude this post without saying thank you to everyone involved in the project. to Anna Melekhova for her time and valuable guidance during the project. to &lt;a href=&#34;https://github.com/dvyukov&#34;&gt;Dmitry Vyukov&lt;/a&gt;, for the time dedicated to reviewing my pull request and answering our questions. to all my team members and our mentor.&lt;/p&gt;
+</content>
+    </item>
+    <item>
+      <title>What Happens When You Boot Your LInux System</title>
+      <link>http://localhost:1313/2020/03/what-happens-when-you-boot-your-linux-system/</link>
+      <pubDate>Sat, 14 Mar 2020 18:45:52 +0100</pubDate>
+
+      <guid>http://localhost:1313/2020/03/what-happens-when-you-boot-your-linux-system/</guid>
+      <description>&lt;p&gt;Have you ever wondered what’s really going on when you press the power button on your Linux machine? I mean, sure, you see your distribution logo, maybe a loading spinner, and then the login screen. But what’s happening &lt;em&gt;under the hood&lt;/em&gt;? Let’s take a journey together, from the moment you hit that power button to when you’re greeted by the login screen. I’ll explain this process for Fedora which is my favorite Linux distribution!&lt;/p&gt;</description>
+      <content>&lt;p&gt;Have you ever wondered what’s really going on when you press the power button on your Linux machine? I mean, sure, you see your distribution logo, maybe a loading spinner, and then the login screen. But what’s happening &lt;em&gt;under the hood&lt;/em&gt;? Let’s take a journey together, from the moment you hit that power button to when you’re greeted by the login screen. I’ll explain this process for Fedora which is my favorite Linux distribution!&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;power-on-and-the-biosuefi-dance&#34;&gt;
+  Power-On and the BIOS/UEFI Dance
+  &lt;a href=&#34;#power-on-and-the-biosuefi-dance&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;You press the power button. Your computer wakes up, but it’s not ready to run Fedora just yet. First, it hands control over to the &lt;strong&gt;BIOS&lt;/strong&gt; (Basic Input/Output System) or &lt;strong&gt;UEFI&lt;/strong&gt; (Unified Extensible Firmware Interface). Think of this as the computer’s &amp;ldquo;warm-up routine.&amp;rdquo;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;BIOS/UEFI&lt;/strong&gt; does a quick check to make sure all your hardware is present and accounted for. This is called the &lt;strong&gt;Power-On Self-Test (POST)&lt;/strong&gt;. If something’s wrong (like your RAM is missing), it’ll let you know with a beep or an error message.&lt;/li&gt;
+&lt;li&gt;Once the hardware check is done, the BIOS/UEFI looks for a bootable device. This is usually your hard drive or SSD, but it could also be a USB stick or network boot if you’ve set it up that way.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On a Fedora system, UEFI is more common these days, and it’s a bit fancier than the old-school BIOS. UEFI can read partitions and files directly, which makes the next step smoother.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;grub-to-the-rescue&#34;&gt;
+  GRUB to the Rescue
+  &lt;a href=&#34;#grub-to-the-rescue&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Now that the BIOS/UEFI has found your bootable device, it hands control over to the &lt;strong&gt;bootloader&lt;/strong&gt;. On Fedora, this is usually &lt;strong&gt;GRUB&lt;/strong&gt; (Grand Unified Bootloader). GRUB is like the bouncer at a club—it decides which operating system (or kernel) gets to run.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GRUB loads its configuration file (usually located in &lt;code&gt;/boot/grub2/grub.cfg&lt;/code&gt;) and presents you with a menu. If you’ve got multiple kernels installed (maybe you’re testing a new one), you’ll see them listed here.&lt;/li&gt;
+&lt;li&gt;If you don’t press anything, GRUB will boot the default option after a few seconds. This is typically the latest Linux kernel installed on your system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you’ve made your choice (or let the timer run out), GRUB loads the selected &lt;strong&gt;Linux kernel&lt;/strong&gt; into memory and hands over control.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;the-kernel-takes-over&#34;&gt;
+  The Kernel Takes Over
+  &lt;a href=&#34;#the-kernel-takes-over&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The kernel is the heart of your Linux system. It’s what makes everything tick. When GRUB hands control to the kernel, a lot of magic happens:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Hardware Initialization&lt;/strong&gt;: The kernel detects and initializes all your hardware—CPU, RAM, storage devices, network interfaces, you name it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Root Filesystem Mounting&lt;/strong&gt;: The kernel needs to mount the root filesystem (&lt;code&gt;/&lt;/code&gt;) so it can access all the files and programs required to boot the system. On Fedora, this is usually an &lt;code&gt;ext4&lt;/code&gt; or &lt;code&gt;btrfs&lt;/code&gt; partition.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Initramfs&lt;/strong&gt;: Sometimes, the kernel needs a little help to mount the root filesystem, especially if it’s on an encrypted drive or a RAID array. That’s where the &lt;strong&gt;initramfs&lt;/strong&gt; (initial RAM filesystem) comes in. It’s a temporary filesystem loaded into memory that contains tools and drivers needed to mount the real root filesystem.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once the root filesystem is mounted, the kernel starts the first user-space process: &lt;strong&gt;systemd&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;systemd-says-hello&#34;&gt;
+  systemd Says &amp;ldquo;Hello&amp;rdquo;
+  &lt;a href=&#34;#systemd-says-hello&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Ah, &lt;strong&gt;systemd&lt;/strong&gt;. Love it or hate it, it’s the init system used by Fedora (and most modern Linux distributions). When the kernel hands control to systemd, it’s like passing the baton in a relay race.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;systemd&lt;/strong&gt; is responsible for starting and managing all the services and processes required to bring your system to life. It reads its configuration files (usually in &lt;code&gt;/etc/systemd/system/&lt;/code&gt;) and starts services in parallel, which makes booting faster.&lt;/li&gt;
+&lt;li&gt;Some of the key services systemd starts include:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dbus&lt;/strong&gt;: Handles communication between processes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NetworkManager&lt;/strong&gt;: Manages your network connections.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GDM&lt;/strong&gt;: The GNOME Display Manager, which handles the graphical login screen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;gdm-and-the-login-screen&#34;&gt;
+  GDM and the Login Screen
+  &lt;a href=&#34;#gdm-and-the-login-screen&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Finally, we’re getting close to the finish line! Once systemd has started all the necessary services, it launches &lt;strong&gt;GDM&lt;/strong&gt; (GNOME Display Manager). GDM is what gives you that sleek Fedora login screen.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GDM starts the X server or Wayland (Fedora uses Wayland by default these days), which handles the graphical environment.&lt;/li&gt;
+&lt;li&gt;It also loads your desktop theme, fonts, and other graphical elements so everything looks pretty.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you see the login screen, your system is fully booted and ready for you to log in. Enter your password, and you’re in!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;So, there you have it—a whirlwind tour of what happens when you boot your Fedora Workstation. From the BIOS/UEFI to GRUB, the kernel, systemd, and finally GDM, it’s a well-orchestrated dance of software and hardware working together to bring your system to life.&lt;/p&gt;
+</content>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 19 Apr 2019 21:37:58 +0530</pubDate>
+
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hi, I’m Behouba Manassé Kouamé. Currently a Master’s student at Polytechnique Montréal in Québec, Canada. My journey in open source led me to work with the CRIU community as a Google Summer of Code student in both 2023 (on &lt;a href=&#34;https://github.com/checkpoint-restore/go-criu&#34;&gt;go-criu&lt;/a&gt; and &lt;a href=&#34;https://github.com/checkpoint-restore/checkpointctl&#34;&gt;checkpointctl&lt;/a&gt;) and 2025 (on &lt;a href=&#34;https://github.com/checkpoint-restore/criu-coordinator&#34;&gt;criu-coordinator&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;I’m interested in Linux and Cloud Computing, especially in low-level systems and distributed environments. Beyond tech, I enjoy drawing, gaming, and immersing myself in anime and manga. I might look like a big guy, but don’t let my physique fool you—I’m actually pretty shy and kind. 😅&lt;/p&gt;</description>
+      <content>&lt;p&gt;Hi, I’m Behouba Manassé Kouamé. Currently a Master’s student at Polytechnique Montréal in Québec, Canada. My journey in open source led me to work with the CRIU community as a Google Summer of Code student in both 2023 (on &lt;a href=&#34;https://github.com/checkpoint-restore/go-criu&#34;&gt;go-criu&lt;/a&gt; and &lt;a href=&#34;https://github.com/checkpoint-restore/checkpointctl&#34;&gt;checkpointctl&lt;/a&gt;) and 2025 (on &lt;a href=&#34;https://github.com/checkpoint-restore/criu-coordinator&#34;&gt;criu-coordinator&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;I’m interested in Linux and Cloud Computing, especially in low-level systems and distributed environments. Beyond tech, I enjoy drawing, gaming, and immersing myself in anime and manga. I might look like a big guy, but don’t let my physique fool you—I’m actually pretty shy and kind. 😅&lt;/p&gt;
+</content>
+    </item>
   </channel>
 </rss>

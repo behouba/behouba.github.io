@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Behouba Manassé K</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Behouba Manassé K</description>
+    <generator>Hugo -- gohugo.io</generator>
+      <language>en-us</language>
+      <lastBuildDate>Tue, 03 Oct 2023 11:25:52 +0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memory Forensics analysis of container checkpoints with checkpointctl</title>
+      <link>http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/2023/10/memory-forensics-analysis-of-container-checkpoints-with-checkpointctl/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;
+  Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems. In recent years, containerized applications have become popular. Containers are not immune to cyberattacks, and when there are suspicious malicious activities, it may be useful to be able to investigate our container without disturbing the operation of that container. This is when &lt;code&gt;checkpoinctl&lt;/code&gt; came in handy. &lt;code&gt;checkpointcl&lt;/code&gt; is CLI project from the open-source organization CRIU (Checkpoint Restore In Userspace) that makes it easy to inspect container checkpoints created by CRIU. In this article, we will see how &lt;code&gt;checkpointcl&lt;/code&gt; can be used as a forensic analysis tool for container checkpoints.&lt;/p&gt;</description>
+      <content>
+&lt;h2 id=&#34;introduction&#34;&gt;
+  Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In the field of computer science, forensic analysis, also known as computer forensics, is a specialized domain that focuses on the extraction of evidence from electronic devices and digital data. Forensic analysis goals are to identify, preserve, recover, analyze, and ultimately present factual information and expert opinions about cybercrimes or other digital activities. The computer forensic analyst uses various techniques and tools to guide his investigations. Tools such as Wireshark, Volatility, Autopsy, and others are popular forensic analysis tools across various operating systems. In recent years, containerized applications have become popular. Containers are not immune to cyberattacks, and when there are suspicious malicious activities, it may be useful to be able to investigate our container without disturbing the operation of that container. This is when &lt;code&gt;checkpoinctl&lt;/code&gt; came in handy. &lt;code&gt;checkpointcl&lt;/code&gt; is CLI project from the open-source organization CRIU (Checkpoint Restore In Userspace) that makes it easy to inspect container checkpoints created by CRIU. In this article, we will see how &lt;code&gt;checkpointcl&lt;/code&gt; can be used as a forensic analysis tool for container checkpoints.&lt;/p&gt;
+
+&lt;h2 id=&#34;prerequisite&#34;&gt;
+  Prerequisite
+  &lt;a href=&#34;#prerequisite&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A Linux operating system&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Podman (&lt;a href=&#34;https://podman.io/docs/installation&#34;&gt;Podman Installation Instructions&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://criu.org/Installation&#34;&gt;CRIU&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/checkpoint-restore/checkpointctl&#34;&gt;checkpointcl&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;creating-a-container-checkpoint&#34;&gt;
+  Creating a container checkpoint
+  &lt;a href=&#34;#creating-a-container-checkpoint&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;We start by starting a Postgres container with Podman:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;podman run --name postgres -d -e &lt;span class=&#34;nv&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;secret_password postgres&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Because checkpoints currently work with root containers only, it is necessary to run the Postgres container as root. I have switched to root for all the examples in this tutorial. Alternatively, you can prefix your commands with &lt;code&gt;sudo&lt;/code&gt; to achieve the same effect.&lt;/p&gt;
+&lt;p&gt;Create a checkpoint for the container:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir checkpoints
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; checkpoints
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;podman container checkpoint postgres --leave-running --export postgres-checkpoint.tar.gz&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls postgres-checkpoint.tar.gz&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Install &lt;code&gt;checkpointctl&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go install github.com/checkpoint-restore/checkpointctl@main&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Verify the installation:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl --help&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;checkpoint-analysis-with-checkpointctl&#34;&gt;
+  Checkpoint analysis with &lt;code&gt;checkpointctl&lt;/code&gt;
+  &lt;a href=&#34;#checkpoint-analysis-with-checkpointctl&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;show&lt;/code&gt; subcommand to get an overview of the checkpoint.&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl show postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying container checkpoint data from postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; CONTAINER &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;               IMAGE               &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      ID      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; RUNTIME &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          CREATED          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ENGINE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; CHKPT SIZE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ROOT FS DIFF SIZE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; docker.io/library/postgres:latest &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; e95b555d040d &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; crun    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2024-01-28T14:37:56-05:00 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Podman &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 27.3 MiB   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.0 KiB           &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----------+-----------------------------------+--------------+---------+---------------------------+--------+------------+-------------------+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Use &lt;code&gt;inspect&lt;/code&gt; subcommand to get more detailed information about the container checkpoint.&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl inspect postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying container checkpoint tree view from postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Image: docker.io/library/postgres:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── ID: e95b555d040dcb2f61c3c8f62511827e58b8733456f3ec797c4a846c4bd7ac8c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Runtime: crun
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Created: 2024-01-28T14:37:56-05:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Engine: Podman
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Checkpoint size: 27.3 MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── Memory pages size: 27.2 MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── Root FS diff size: 2.0 KiB&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;To see the process tree of the container, add the &lt;code&gt;--ps-tree&lt;/code&gt; option:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl inspect postgres-checkpoint.tar.gz --ps-tree
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying container checkpoint tree view from postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Image: docker.io/library/postgres:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── ID: e95b555d040dcb2f61c3c8f62511827e58b8733456f3ec797c4a846c4bd7ac8c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Runtime: crun
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Created: 2024-01-28T14:37:56-05:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Engine: Podman
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Checkpoint size: 27.3 MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── Memory pages size: 27.2 MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Root FS diff size: 2.0 KiB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── Process tree
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;55&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;56&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;58&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;59&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        └── &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;60&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  postgres&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;inspect&lt;/code&gt; subcommand provides additional capabilities, so refer to the command-line documentation for more details:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl inspect --help&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Finally, you can use &lt;code&gt;memparse&lt;/code&gt; subcommand to read the contents of the memory pages of the container checkpoint to get a more in-depth overview of the state of the container when it was checkpointed.&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl memparse postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying processes memory sizes from postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; PID &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; PROCESS NAME &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; MEMORY SIZE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; SHARED MEMORY SIZE &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.3 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 142.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;55&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.3 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 142.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;56&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.3 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 142.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;58&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.3 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 142.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;59&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.6 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 143.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; postgres     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2.5 MiB     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 143.6 MiB          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+-----+--------------+-------------+--------------------+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;To display the contents of memory pages for a specific process (e.g., PID 1), use:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkpointctl memparse postgres-checkpoint.tar.gz --pid&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Displaying memory pages content &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; process ID &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; from checkpoint: postgres-checkpoint.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Address           Hexadecimal                                       ASCII            
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-------------------------------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a000  &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; ec &lt;span class=&#34;m&#34;&gt;08&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; 8b &lt;span class=&#34;m&#34;&gt;05&lt;/span&gt; 3d 0f &lt;span class=&#34;m&#34;&gt;79&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;85&lt;/span&gt; c0 &lt;span class=&#34;m&#34;&gt;74&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;H...H..&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.y.H..t.&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a010  ff d0 &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; c4 &lt;span class=&#34;m&#34;&gt;08&lt;/span&gt; c3 &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;..H.............&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a020  ff &lt;span class=&#34;m&#34;&gt;35&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;54&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; 0f 1f &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.5R.x..%T.x...@.&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a030  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 e0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%R.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a040  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 4a fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;01&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 d0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%J.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a050  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;42&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;02&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 c0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%B.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a060  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 3a fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;03&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 b0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%:.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a070  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 a0 ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%2.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a080  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; 2a fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;05&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 &lt;span class=&#34;m&#34;&gt;90&lt;/span&gt; ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%*.x.h.........&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;000055996b20a090  ff &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; fe &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;68&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;06&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;00&lt;/span&gt; e9 &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; ff ff ff  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;.%&lt;span class=&#34;s2&#34;&gt;&amp;#34;.x.h.........|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0a0  ff 25 1a fe 78 00 68 07 00 00 00 e9 70 ff ff ff  |.%..x.h.....p...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0b0  ff 25 12 fe 78 00 68 08 00 00 00 e9 60 ff ff ff  |.%..x.h.....`...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0c0  ff 25 0a fe 78 00 68 09 00 00 00 e9 50 ff ff ff  |.%..x.h.....P...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0d0  ff 25 02 fe 78 00 68 0a 00 00 00 e9 40 ff ff ff  |.%..x.h.....@...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0e0  ff 25 fa fd 78 00 68 0b 00 00 00 e9 30 ff ff ff  |.%..x.h.....0...|
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;000055996b20a0f0  ff 25 f2 fd 78 00 68 0c 00 00 00 e9 20 ff ff ff  |.%..x.h..... ...|&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;
+  Conclusion
+  &lt;a href=&#34;#conclusion&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;checkpointctl&lt;/code&gt; is a powerful tool for forensic analysis of container checkpoints, allowing investigators to scrutinize and understand the state of a container at a specific point in time. Its capabilities provide insights into the container&amp;rsquo;s configuration, processes, files, and memory, facilitating effective forensic examinations in the ever-evolving landscape of cyber threats.&lt;/p&gt;
+</content>
+    </item>
+    <item>
+      <title>Discovering Kernel Fuzzing</title>
+      <link>http://localhost:1313/2022/08/discovering-kernel-fuzzing/</link>
+      <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/2022/08/discovering-kernel-fuzzing/</guid>
+      <description>&lt;p&gt;This year, during an industrial project that is part of my master&amp;rsquo;s program, I had the opportunity to make my first steps into the world of kernel fuzzing. This was a great learning experience, during which I had the opportunity to work with wonderful people. In this blog post, I will describe my journey into the world of kernel fuzzing.&lt;/p&gt;
+&lt;p&gt;I have to admit that I didn&amp;rsquo;t know anything about fuzzing when I was finishing my first semester of the Master of Software Engineering at &lt;a href=&#34;https://innopolis.university/en/&#34;&gt;Innopolis University&lt;/a&gt;. Before the end of the first semester, we have to choose an industrial project for the next semester. To do so, we attended multiple project presentation sessions with representatives of different companies. During the project presentations, we were presented with many interesting projects covering various areas of software engineering. One project from KasperskyLab was the most appealing to me; I don&amp;rsquo;t know exactly why, since I didn&amp;rsquo;t know anything about the project before the presentation. But I think it was because I wanted to learn something outside of my comfort zone. The project was presented by Anna Melekhova, a senior engineer at KasperskyLab. The project was about researching kernel fuzzing approaches and their implementation for Kaspersky OS, a new operating system in development at KasperskyLab. I chose this project and got it accepted along with four other classmates.&lt;/p&gt;</description>
+      <content>&lt;p&gt;This year, during an industrial project that is part of my master&amp;rsquo;s program, I had the opportunity to make my first steps into the world of kernel fuzzing. This was a great learning experience, during which I had the opportunity to work with wonderful people. In this blog post, I will describe my journey into the world of kernel fuzzing.&lt;/p&gt;
+&lt;p&gt;I have to admit that I didn&amp;rsquo;t know anything about fuzzing when I was finishing my first semester of the Master of Software Engineering at &lt;a href=&#34;https://innopolis.university/en/&#34;&gt;Innopolis University&lt;/a&gt;. Before the end of the first semester, we have to choose an industrial project for the next semester. To do so, we attended multiple project presentation sessions with representatives of different companies. During the project presentations, we were presented with many interesting projects covering various areas of software engineering. One project from KasperskyLab was the most appealing to me; I don&amp;rsquo;t know exactly why, since I didn&amp;rsquo;t know anything about the project before the presentation. But I think it was because I wanted to learn something outside of my comfort zone. The project was presented by Anna Melekhova, a senior engineer at KasperskyLab. The project was about researching kernel fuzzing approaches and their implementation for Kaspersky OS, a new operating system in development at KasperskyLab. I chose this project and got it accepted along with four other classmates.&lt;/p&gt;
+&lt;p&gt;According to &lt;a href=&#34;https://en.wikipedia.org/wiki/Fuzzing&#34;&gt;Wikipedia&lt;/a&gt; &amp;ldquo;fuzzing or fuzz testing is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program.&amp;rdquo; So, the way I see it, fuzzing is like tricking a software system. You feed it lots of silly, crazy, and random things to see if it can handle them. The goal of this testing approach is to proactively reveal flaws in the software that might be difficult to find with traditional testing approaches.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Kernel_(operating_system)&#34;&gt;kernel,&lt;/a&gt; on the other hand, is the core component of a computer&amp;rsquo;s operating system. Depending on design choices and architecture, the kernel has more or less complete control over everything in the system.&lt;/p&gt;
+&lt;p&gt;The first week was dedicated to initial research in order to learn as much as possible about fuzzing in general. I went to many websites, read several articles about fuzzing, and finally, I found a good book on the topic, &amp;ldquo;Fuzzing for Software Security Testing and Quality Assurance, Second Edition&amp;rdquo; written by: Ari Takanen, Jared D. Demott, and Charles Miller. Although I didn&amp;rsquo;t read the book cover to cover, I got very good information from It and was confident enough to move on. I recommend reading this book if you want to learn about fuzzing.&lt;/p&gt;
+&lt;p&gt;After I got familiar with the topic of fuzz testing, I started learning about the target system, KasperskyOS. KasperskyOS is a microkernel operating system developed by the company KasperskyLab. KasperskyOS is designed with cyber immunity features in mind. While the source code of this operating system is proprietary and closed source, a publicly available version of our OS is freely available &lt;a href=&#34;https://support.kaspersky.com/help/KCE/1.1/en-US/whats_new.htm&#34;&gt;here&lt;/a&gt;. The community edition is the best way for developers to learn about the OS and develop applications for it.&lt;/p&gt;
+&lt;p&gt;At this point, we have to start researching fuzzing solutions for KasperskyOS. We performed our research by reading several research papers on the topic of kernel fuzzing. At the end of the research, the team agreed that we should work on extending a state-of-the-art kernel fuzzer called Syzkaller. Syzkaller is a popular kernel fuzzing tool developed and maintained by Google. Syzkaller is an unsupervised coverage-guided kernel fuzzer, meaning that it uses coverage data to guide a fully automated fuzzing process.&lt;/p&gt;
+&lt;p&gt;By following the documentation on the GitHub repository of syzkaller, I set up my local fuzzing environment to fuzz the Linux kernel to see how syzkaller works. Syzkaller has a modular design, its main component is called syz-manager and it is a program written in Golang and running on the host system. syz-manager spins off multiple virtual machines. The actual fuzzing happens inside each virtual machine. Inside a virtual machine is the target operating system, alongside other components such as syzkaller, syz-fuzzer , and syz-executor. syz-fuzzer guides the fuzzing process (input generation, mutation, minimization, etc.) and sends inputs that trigger new coverage back to the syz-manager process. The picture below, taken from syzkaller &lt;a href=&#34;https://github.com/google/syzkaller/blob/master/docs/internals.md&#34;&gt;documentation&lt;/a&gt; gives a visual presentation of how the syzkaller fuzzing process works.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/google/syzkaller/master/docs/process_structure.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After our experimentations with syzkaller, we find out that, in order to be able to use syzkaller to fuzz KasperskyOS we have to develop a custom implementation of syz-executor and syz-fuzzer that will run in the user-space inside a virtual machine running KasperskyOS. Then, we faced one issue, syz-fuzzer is written in Golang, and the KasperskyOS platform is not supported by Golang. So we couldn&amp;rsquo;t compile syz-fuzzer for KasperskyOS. We looked at other operating systems to see if they were similar case and how this issue was addressed. It turned out that FuchsiaOS from Google has many things in common with KasperskyOS. The FuchsiaOS platform is also not supported by Golang, so Syzkaller has a mode called &amp;ldquo;host fuzzer&amp;rdquo; making it possible to run syz-fuzzer on the host system. So we tried to do something similar for KasperskyOS, to be stuck again by another limitation. This limitation was related to the fact that KasperskyOS didn&amp;rsquo;t have an ssh server at that time. The fuzzing process of Syzkaller involves establishing an ssh connection between syz-manager/syz-fuzzer and the target system in order to execute syz-executor remotely.&lt;/p&gt;
+&lt;p&gt;At this point, it became clear that there was nothing more we could do and that we couldn&amp;rsquo;t use SyzKaller to fuzz KasperskyOS until KasperskyLab added an SSH server to their OS. To go further in this learning journey, and after discussing with the representative of the company, we decided to fall back on FuchsiaOS to complete the course project. As stated above, FuchsiaOS is in many aspects similar to KasperskyOS, and Syzkaller support for FuchsiaOS was broken, and we wanted to try to fix it. Luckily enough, it wasn&amp;rsquo;t very hard, and I was able to fix this in a few days with the help of Syzkaller maintainer &lt;a href=&#34;https://github.com/dvyukov&#34;&gt;Dmitry Vyukov&lt;/a&gt;. Here is my &lt;a href=&#34;https://github.com/google/syzkaller/pull/3205&#34;&gt;pull request&lt;/a&gt; that fixed the support for FuchsiaOS.&lt;/p&gt;
+&lt;p&gt;Overall, this was a great experience for me personally to learn about kernel fuzzing with Syzkaller. I cannot conclude this post without saying thank you to everyone involved in the project. to Anna Melekhova for her time and valuable guidance during the project. to &lt;a href=&#34;https://github.com/dvyukov&#34;&gt;Dmitry Vyukov&lt;/a&gt;, for the time dedicated to reviewing my pull request and answering our questions. to all my team members and our mentor.&lt;/p&gt;
+</content>
+    </item>
+    <item>
+      <title>What Happens When You Boot Your LInux System</title>
+      <link>http://localhost:1313/2020/03/what-happens-when-you-boot-your-linux-system/</link>
+      <pubDate>Sat, 14 Mar 2020 18:45:52 +0100</pubDate>
+
+      <guid>http://localhost:1313/2020/03/what-happens-when-you-boot-your-linux-system/</guid>
+      <description>&lt;p&gt;Have you ever wondered what’s really going on when you press the power button on your Linux machine? I mean, sure, you see your distribution logo, maybe a loading spinner, and then the login screen. But what’s happening &lt;em&gt;under the hood&lt;/em&gt;? Let’s take a journey together, from the moment you hit that power button to when you’re greeted by the login screen. I’ll explain this process for Fedora which is my favorite Linux distribution!&lt;/p&gt;</description>
+      <content>&lt;p&gt;Have you ever wondered what’s really going on when you press the power button on your Linux machine? I mean, sure, you see your distribution logo, maybe a loading spinner, and then the login screen. But what’s happening &lt;em&gt;under the hood&lt;/em&gt;? Let’s take a journey together, from the moment you hit that power button to when you’re greeted by the login screen. I’ll explain this process for Fedora which is my favorite Linux distribution!&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;power-on-and-the-biosuefi-dance&#34;&gt;
+  Power-On and the BIOS/UEFI Dance
+  &lt;a href=&#34;#power-on-and-the-biosuefi-dance&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;You press the power button. Your computer wakes up, but it’s not ready to run Fedora just yet. First, it hands control over to the &lt;strong&gt;BIOS&lt;/strong&gt; (Basic Input/Output System) or &lt;strong&gt;UEFI&lt;/strong&gt; (Unified Extensible Firmware Interface). Think of this as the computer’s &amp;ldquo;warm-up routine.&amp;rdquo;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;BIOS/UEFI&lt;/strong&gt; does a quick check to make sure all your hardware is present and accounted for. This is called the &lt;strong&gt;Power-On Self-Test (POST)&lt;/strong&gt;. If something’s wrong (like your RAM is missing), it’ll let you know with a beep or an error message.&lt;/li&gt;
+&lt;li&gt;Once the hardware check is done, the BIOS/UEFI looks for a bootable device. This is usually your hard drive or SSD, but it could also be a USB stick or network boot if you’ve set it up that way.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On a Fedora system, UEFI is more common these days, and it’s a bit fancier than the old-school BIOS. UEFI can read partitions and files directly, which makes the next step smoother.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;grub-to-the-rescue&#34;&gt;
+  GRUB to the Rescue
+  &lt;a href=&#34;#grub-to-the-rescue&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Now that the BIOS/UEFI has found your bootable device, it hands control over to the &lt;strong&gt;bootloader&lt;/strong&gt;. On Fedora, this is usually &lt;strong&gt;GRUB&lt;/strong&gt; (Grand Unified Bootloader). GRUB is like the bouncer at a club—it decides which operating system (or kernel) gets to run.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GRUB loads its configuration file (usually located in &lt;code&gt;/boot/grub2/grub.cfg&lt;/code&gt;) and presents you with a menu. If you’ve got multiple kernels installed (maybe you’re testing a new one), you’ll see them listed here.&lt;/li&gt;
+&lt;li&gt;If you don’t press anything, GRUB will boot the default option after a few seconds. This is typically the latest Linux kernel installed on your system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you’ve made your choice (or let the timer run out), GRUB loads the selected &lt;strong&gt;Linux kernel&lt;/strong&gt; into memory and hands over control.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;the-kernel-takes-over&#34;&gt;
+  The Kernel Takes Over
+  &lt;a href=&#34;#the-kernel-takes-over&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The kernel is the heart of your Linux system. It’s what makes everything tick. When GRUB hands control to the kernel, a lot of magic happens:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Hardware Initialization&lt;/strong&gt;: The kernel detects and initializes all your hardware—CPU, RAM, storage devices, network interfaces, you name it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Root Filesystem Mounting&lt;/strong&gt;: The kernel needs to mount the root filesystem (&lt;code&gt;/&lt;/code&gt;) so it can access all the files and programs required to boot the system. On Fedora, this is usually an &lt;code&gt;ext4&lt;/code&gt; or &lt;code&gt;btrfs&lt;/code&gt; partition.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Initramfs&lt;/strong&gt;: Sometimes, the kernel needs a little help to mount the root filesystem, especially if it’s on an encrypted drive or a RAID array. That’s where the &lt;strong&gt;initramfs&lt;/strong&gt; (initial RAM filesystem) comes in. It’s a temporary filesystem loaded into memory that contains tools and drivers needed to mount the real root filesystem.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once the root filesystem is mounted, the kernel starts the first user-space process: &lt;strong&gt;systemd&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;systemd-says-hello&#34;&gt;
+  systemd Says &amp;ldquo;Hello&amp;rdquo;
+  &lt;a href=&#34;#systemd-says-hello&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Ah, &lt;strong&gt;systemd&lt;/strong&gt;. Love it or hate it, it’s the init system used by Fedora (and most modern Linux distributions). When the kernel hands control to systemd, it’s like passing the baton in a relay race.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;systemd&lt;/strong&gt; is responsible for starting and managing all the services and processes required to bring your system to life. It reads its configuration files (usually in &lt;code&gt;/etc/systemd/system/&lt;/code&gt;) and starts services in parallel, which makes booting faster.&lt;/li&gt;
+&lt;li&gt;Some of the key services systemd starts include:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dbus&lt;/strong&gt;: Handles communication between processes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NetworkManager&lt;/strong&gt;: Manages your network connections.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GDM&lt;/strong&gt;: The GNOME Display Manager, which handles the graphical login screen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&#34;gdm-and-the-login-screen&#34;&gt;
+  GDM and the Login Screen
+  &lt;a href=&#34;#gdm-and-the-login-screen&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Finally, we’re getting close to the finish line! Once systemd has started all the necessary services, it launches &lt;strong&gt;GDM&lt;/strong&gt; (GNOME Display Manager). GDM is what gives you that sleek Fedora login screen.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GDM starts the X server or Wayland (Fedora uses Wayland by default these days), which handles the graphical environment.&lt;/li&gt;
+&lt;li&gt;It also loads your desktop theme, fonts, and other graphical elements so everything looks pretty.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you see the login screen, your system is fully booted and ready for you to log in. Enter your password, and you’re in!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;So, there you have it—a whirlwind tour of what happens when you boot your Fedora Workstation. From the BIOS/UEFI to GRUB, the kernel, systemd, and finally GDM, it’s a well-orchestrated dance of software and hardware working together to bring your system to life.&lt;/p&gt;
+</content>
+    </item>
+  </channel>
+</rss>

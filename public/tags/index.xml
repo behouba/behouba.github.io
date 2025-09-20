@@ -1,87 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Behouba Manasse</title>
-    <link>https://examplesite.com/tags/</link>
-    <description>Recent content in Tags on Behouba Manasse</description>
+    <title>Tags on Behouba Manassé K</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Behouba Manassé K</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://examplesite.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+      <language>en-us</language>
+      <lastBuildDate>Tue, 03 Oct 2023 11:25:52 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>privacy</title>
-      <link>https://examplesite.com/tags/privacy/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/tags/privacy/</guid>
+      <title>Checkpoint/Restore</title>
+      <link>http://localhost:1313/tags/checkpoint/restore/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/checkpoint/restore/</guid>
       <description></description>
+      <content></content>
     </item>
-    
     <item>
-      <title>shortcodes</title>
-      <link>https://examplesite.com/tags/shortcodes/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/tags/shortcodes/</guid>
+      <title>Container</title>
+      <link>http://localhost:1313/tags/container/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/container/</guid>
       <description></description>
+      <content></content>
     </item>
-    
     <item>
-      <title>markdown</title>
-      <link>https://examplesite.com/tags/markdown/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/tags/markdown/</guid>
+      <title>CRIU</title>
+      <link>http://localhost:1313/tags/criu/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/criu/</guid>
       <description></description>
+      <content></content>
     </item>
-    
     <item>
-      <title>text</title>
-      <link>https://examplesite.com/tags/text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/tags/text/</guid>
+      <title>Cybersecurity</title>
+      <link>http://localhost:1313/tags/cybersecurity/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/cybersecurity/</guid>
       <description></description>
+      <content></content>
     </item>
-    
     <item>
-      <title>emoji</title>
-      <link>https://examplesite.com/tags/emoji/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/tags/emoji/</guid>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
+      <content></content>
     </item>
-    
     <item>
-      <title>css</title>
-      <link>https://examplesite.com/tags/css/</link>
-      <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/tags/css/</guid>
+      <title>Golang</title>
+      <link>http://localhost:1313/tags/golang/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/golang/</guid>
       <description></description>
+      <content></content>
     </item>
-    
     <item>
-      <title>html</title>
-      <link>https://examplesite.com/tags/html/</link>
-      <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/tags/html/</guid>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
+      <content></content>
     </item>
-    
     <item>
-      <title>index</title>
-      <link>https://examplesite.com/tags/index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/tags/index/</guid>
+      <title>Podman</title>
+      <link>http://localhost:1313/tags/podman/</link>
+      <pubDate>Tue, 03 Oct 2023 11:25:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/podman/</guid>
       <description></description>
+      <content></content>
     </item>
-    
+    <item>
+      <title>Fuzzing</title>
+      <link>http://localhost:1313/tags/fuzzing/</link>
+      <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/fuzzing/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    <item>
+      <title>OS</title>
+      <link>http://localhost:1313/tags/os/</link>
+      <pubDate>Sun, 14 Aug 2022 18:45:52 +0300</pubDate>
+
+      <guid>http://localhost:1313/tags/os/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    <item>
+      <title>Fedora</title>
+      <link>http://localhost:1313/tags/fedora/</link>
+      <pubDate>Sat, 14 Mar 2020 18:45:52 +0100</pubDate>
+
+      <guid>http://localhost:1313/tags/fedora/</guid>
+      <description></description>
+      <content></content>
+    </item>
   </channel>
 </rss>
