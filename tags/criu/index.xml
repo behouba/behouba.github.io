@@ -409,7 +409,7 @@ Resources
 &lt;li&gt;&lt;a href="https://criu.org"&gt;CRIU Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://podman.io"&gt;Podman Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://linuxcontainers.org/lxc/documentation/"&gt;Linux Containers (LXC) Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub Repository: &lt;a href="https://github.com/checkpoint-restore/criu-coordinator"&gt;behouba/criu-coordinator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub Repository: &lt;a href="https://github.com/checkpoint-restore/criu-coordinator"&gt;checkpoint-restore/criu-coordinator&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;GSoC Final Report: &lt;a href="https://github.com/behouba/gsoc-2025"&gt;behouba/gsoc-2025&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Demo Video: &lt;a href="http://www.youtube.com/watch?v=bLzeN9JL6sk"&gt;YouTube&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
